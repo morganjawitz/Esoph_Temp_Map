@@ -40,6 +40,6 @@ R7_Temp = np.interp(R7_ref,RtR,T_C)
 #print('R7 =' + str(R7))
 #print('R_ref =' + str(R7_ref))
 
-while true:
+while True:
  print('R7 Temperature =' + str(R7_Temp) + 'C')
  time.sleep(0.5)
