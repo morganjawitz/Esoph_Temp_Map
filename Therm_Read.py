@@ -36,6 +36,6 @@ R7_Temp = np.interp(R7_ref,RtR,T_C)
 #Displaying results
 #print('Raw ADC Value: ', chan7.value)
 print('ADC Voltage: ' + str(chan7.voltage) + 'V')
-print('R7 =' str(R7))
-print('R_ref =' str(R7_ref))
+print('R7 =' + str(R7))
+print('R_ref =' + str(R7_ref))
 print('R7 Temperature =' + str(R7_Temp) + 'C')
