@@ -6,8 +6,8 @@ import adafruit_mcp3xxx.mcp3008 as MCP #library for interfacing with ADC
 from adafruit_mcp3xxx.analog_in import AnalogIn #function for reading analong pin
  
 #Creataing interpolation arrays for therm, found in therm datasheet
-T_C = [0,5,10,15,20,25,30,35,40,45,50,55,60]
-RtR = [2.8024,2.2520,1.8216,1.4827,1.2142,1.0000,0.8282,0.6895,0.5770,0.4853,0.4100,0.3479,0.2966]
+T_C = [60,55,50,45,40,35,30,25,20,15,10,5,0]
+RtR = [0.2966,0.3479,0.4100,0.4853,0.5770,0.6895,0.8282,1.0000,1.2142,1.4827,1.8216,2.2520,2.8024]
 
 #Ref resistor in voltage divder
 R_ref = 10000
