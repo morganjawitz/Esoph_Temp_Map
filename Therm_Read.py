@@ -10,7 +10,7 @@ T_C = [0,5,10,15,20,25,30,35,40,45,50,55,60]
 RtR = [2.8024,2.2520,1.8216,1.4827,1.2142,1.0000,0.8282,0.6895,0.5770,0.4853,0.4100,0.3479,0.2966]
 
 #Ref resistor in voltage divder
-R_ref = 10e3
+R_ref = 10000
 
 # create the spi bus
 spi = busio.SPI(clock=board.SCK, MISO=board.MISO, MOSI=board.MOSI)
