@@ -27,7 +27,7 @@ chan7 = AnalogIn(mcp, MCP.P7)
 volt7 = chan7.voltage
 
 #Calculating resitance of thermistor using KCL
-R7 = (R_ref*(volt7 - 3.3))/volt7
+R7 = (R_ref*(volt7 - 3.3))/-volt7
 R7_ref = R7/R_ref
 
 #interpolating values from datasheet
