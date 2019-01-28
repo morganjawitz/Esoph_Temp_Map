@@ -62,5 +62,5 @@ while True:
  #print('R5 Temperature =' + str(R_temp[5]) + 'C\r', end="")
  #print('R6 Temperature =' + str(R_temp[6]) + 'C\r', end="")
  #print('R7 Temperature =' + str(R_temp[7]) + 'C\r', end="")
- print(str(R_temp) + '\r', end="")
+ print(str(R_temp[0]) + 'C\r', end="")
  time.sleep(0.1)
