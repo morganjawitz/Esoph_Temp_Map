@@ -41,6 +41,5 @@ R7_Temp = np.interp(R7_ref,RtR,T_C)
 #print('R_ref =' + str(R7_ref))
 
 while True:
- print('R7 Temperature =' + str(R7_Temp) + 'C')
- print('\r')
+ print('R7 Temperature =' + str(R7_Temp) + 'C'\r)
  time.sleep(0.5)
