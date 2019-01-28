@@ -22,17 +22,7 @@ cs = digitalio.DigitalInOut(board.D5)
 # create the mcp object
 mcp = MCP.MCP3008(spi, cs)
  
-# create an analog input channel on pin 7
-#eventually make loop to go through all 8 pins
-chan7 = AnalogIn(mcp, MCP.P7)
-volt7 = chan7.voltage
 
-#Calculating resitance of thermistor using KCL
-R7 = (R_ref*(volt7 - 3.3))/-volt7
-R7_ref = R7/R_ref
-
-#interpolating values from datasheet
-R7_Temp = np.interp(R7_ref,RtR,T_C)
  
 #Displaying results
 #print('Raw ADC Value: ', chan7.value)
@@ -41,5 +31,18 @@ R7_Temp = np.interp(R7_ref,RtR,T_C)
 #print('R_ref =' + str(R7_ref))
 
 while True:
+ # create an analog input channel on pin 7
+ #eventually make loop to go through all 8 pins
+ chan7 = AnalogIn(mcp, MCP.P7)
+ volt7 = chan7.voltage
+
+ #Calculating resitance of thermistor using KCL
+ R7 = (R_ref*(volt7 - 3.3))/-volt7
+ R7_ref = R7/R_ref
+
+ #interpolating values from datasheet
+ R7_Temp = np.interp(R7_ref,RtR,T_C)
+ 
+ #Displaying Values
  print('R7 Temperature =' + str(R7_Temp) + 'C\r', end="")
  time.sleep(0.5)
