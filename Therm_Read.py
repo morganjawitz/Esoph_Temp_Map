@@ -54,13 +54,13 @@ while True:
  		R_temp[i] = np.interp(R_ref,RtR,T_C)
 
  #Displaying Values
- print('R0 Temperature =' + str(R_temp[0]) + 'C\n' + 
- 	'R1 Temperature =' + str(R_temp[1]) + 'C\n' + 
- 	'R2 Temperature =' + str(R_temp[2]) + 'C\n' +
- 	'R3 Temperature =' + str(R_temp[3]) + 'C\n' +
- 	'R4 Temperature =' + str(R_temp[4]) + 'C\n' +
- 	'R5 Temperature =' + str(R_temp[5]) + 'C\n' +
- 	'R6 Temperature =' + str(R_temp[6]) + 'C\n' +
- 	'R7 Temperature =' + str(R_temp[7]) + 'C\r', end="")
- 
+ #print('R0 Temperature =' + str(R_temp[0]) + 'C\n', end="")
+ #print('R1 Temperature =' + str(R_temp[1]) + 'C\r', end="")
+ #print('R2 Temperature =' + str(R_temp[2]) + 'C\r', end="")
+ #print('R3 Temperature =' + str(R_temp[3]) + 'C\r', end="")
+ #print('R4 Temperature =' + str(R_temp[4]) + 'C\r', end="")
+ #print('R5 Temperature =' + str(R_temp[5]) + 'C\r', end="")
+ #print('R6 Temperature =' + str(R_temp[6]) + 'C\r', end="")
+ #print('R7 Temperature =' + str(R_temp[7]) + 'C\r', end="")
+ print(str(R_temp) + '\r', end="")
  time.sleep(0.1)
