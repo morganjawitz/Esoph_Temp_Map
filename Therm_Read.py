@@ -43,7 +43,7 @@ while True:
  	if chan.value == 0:
  		R_temp[i+1] = str("Thermistor Error")
  	else:
-		volt = chan.voltage
+	    volt = chan.voltage
  		#converting voltage to resesitance using KCL
  		R = (R_div*(volt - 0.4125))/-volt
  		#finding refrence fraction
