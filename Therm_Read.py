@@ -41,7 +41,7 @@ while True:
  	#creating pin object from analog input
  	chan = AnalogIn(mcp, MCP.P0) #need to find way to loop through pin number
  	volt = chan.voltage
- 	print(chan.voltage)
+ 	#print(chan.voltage)
  	#converting raw data to voltage
  	if volt == 0:
  		R_temp[i] = str("Thermistor Error")
