@@ -36,16 +36,16 @@ while True:
  #eventually make loop to go through all 8 pins
  for i in range(0,7):
  	#setting analog call string based on pin number for loop
- 	chan_call = "adafruit_mcp3xxx.mcp3008.MCP3008(spi, cs), adafruit_mcp3xxx.mcp3008.P0"
+ 	chan_call = str(mcp, MCP.P + i)
  	#print(chan_call)
  	#creating pin object from analog input
- 	chan = AnalogIn(mcp, MCP.P0) #need to find way to loop through pin number
+ 	chan = AnalogIn(chan_call) #need to find way to loop through pin number
+ 	volt = chan.voltage
  	print(chan.voltage)
  	#converting raw data to voltage
- 	if chan.voltage == 0:
+ 	if volt == 0:
  		R_temp[i+1] = str("Thermistor Error")
  	else:
- 		volt = chan.voltage
  		#converting voltage to resesitance using KCL
  		R = (R_div*(volt - 0.4125))/-volt
  		#finding refrence fraction
