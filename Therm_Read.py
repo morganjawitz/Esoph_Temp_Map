@@ -44,22 +44,22 @@ while True:
  	print(chan.voltage)
  	#converting raw data to voltage
  	if volt == 0:
- 		R_temp[i+1] = str("Thermistor Error")
+ 		R_temp[i] = str("Thermistor Error")
  	else:
  		#converting voltage to resesitance using KCL
  		R = (R_div*(volt - 0.4125))/-volt
  		#finding refrence fraction
  		R_ref = R/R_div
  		#interpolating values from datasheet
- 		R_temp[i+1] = np.interp(R_ref,RtR,T_C)
+ 		R_temp[i] = np.interp(R_ref,RtR,T_C)
 
  #Displaying Values
- print('R0 Temperature =' + str(R_temp[1]) + 'C\r', end="")
- print('R1 Temperature =' + str(R_temp[2]) + 'C\r', end="")
- print('R2 Temperature =' + str(R_temp[3]) + 'C\r', end="")
- print('R3 Temperature =' + str(R_temp[4]) + 'C\r', end="")
- print('R4 Temperature =' + str(R_temp[5]) + 'C\r', end="")
- print('R5 Temperature =' + str(R_temp[6]) + 'C\r', end="")
- print('R6 Temperature =' + str(R_temp[7]) + 'C\r', end="")
- print('R7 Temperature =' + str(R_temp[8]) + 'C\r', end="")
+ print('R0 Temperature =' + str(R_temp[0]) + 'C\r', end="")
+ print('R1 Temperature =' + str(R_temp[1]) + 'C\r', end="")
+ print('R2 Temperature =' + str(R_temp[2]) + 'C\r', end="")
+ print('R3 Temperature =' + str(R_temp[3]) + 'C\r', end="")
+ print('R4 Temperature =' + str(R_temp[4]) + 'C\r', end="")
+ print('R5 Temperature =' + str(R_temp[5]) + 'C\r', end="")
+ print('R6 Temperature =' + str(R_temp[6]) + 'C\r', end="")
+ print('R7 Temperature =' + str(R_temp[7]) + 'C\r', end="")
  time.sleep(0.1)
