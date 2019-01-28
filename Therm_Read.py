@@ -39,7 +39,7 @@ while True:
  	chan_call = "adafruit_mcp3xxx.mcp3008.MCP3008(spi, cs), adafruit_mcp3xxx.mcp3008.P0"
  	print(chan_call)
  	#creating pin object from analog input
- 	chan = AnalogIn(chan_call)
+ 	chan = AnalogIn(mcp, MCP.P0)
  	#converting raw data to voltage
  	if chan.value == 0:
  		R_temp[i+1] = str("Thermistor Error")
