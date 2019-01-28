@@ -35,7 +35,7 @@ while True:
  #eventually make loop to go through all 8 pins
  chan7 = AnalogIn(mcp, MCP.P7)
  volt7 = chan7.voltage
- print(volt7)
+ #print(volt7)
 
  #Calculating resitance of thermistor using KCL
  R7 = (R_ref*(volt7 - 3.3))/-volt7
