@@ -39,7 +39,7 @@ while True:
  	#chan_call = str()
  	#print(chan_call)
  	#creating pin object from analog input
- 	chan = AnalogIn(mcp, MCP.P0) #need to find way to loop through pin number
+ 	chan = AnalogIn(mcp, MCP.P7) #need to find way to loop through pin number
  	volt = chan.voltage
  	#print(chan.voltage)
  	#converting raw data to voltage
@@ -63,4 +63,4 @@ while True:
  #print('R6 Temperature =' + str(R_temp[6]) + 'C\r', end="")
  #print('R7 Temperature =' + str(R_temp[7]) + 'C\r', end="")
  print(str(R_temp[0]) + 'C\r', end="")
- time.sleep(0.1)
+ time.sleep(0.5)
