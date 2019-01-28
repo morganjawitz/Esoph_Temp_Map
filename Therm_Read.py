@@ -40,9 +40,9 @@ while True:
  	#creating pin vector from analog input
  	chan[i+1] = AnalogIn(chan_call)
  	#converting raw data to voltage for volt array
- 	if chan[i+1] == 0
+ 	if chan[i+1] == 0:
  		R_temp[i+1] = str("Thermistor Error")
- 	else
+ 	else:
 		volt[i+1] = chan[i+1].voltage
  		#converting voltage to resesitance using KCL
  		R[i+1] = (R_div*(volt[i+1] - 0.4125))/-volt[i+1]
