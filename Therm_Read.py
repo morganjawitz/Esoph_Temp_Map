@@ -41,15 +41,15 @@ while True:
  	chan = AnalogIn(chan_call)
  	#converting raw data to voltage
  	if chan.value == 0:
- 		R_temp[i+1] = str("Thermistor Error")
- 	else:
-	    volt = chan.voltage
+		R_temp[i+1] = str("Thermistor Error")
+	else:
+		volt = chan.voltage
  		#converting voltage to resesitance using KCL
- 	    R = (R_div*(volt - 0.4125))/-volt
- 		#finding refrence fraction
- 	    R_ref = R/R_div
- 		#interpolating values from datasheet
- 	    R_temp[i+1] = np.interp(R_ref,RtR,T_C)
+		R = (R_div*(volt - 0.4125))/-volt
+		#finding refrence fraction
+		R_ref = R/R_div
+		#interpolating values from datasheet
+		R_temp[i+1] = np.interp(R_ref,RtR,T_C)
 
  #Displaying Values
  print('R0 Temperature =' + str(R_temp[1]) + 'C\r', end="")
