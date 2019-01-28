@@ -36,7 +36,7 @@ while True:
  #eventually make loop to go through all 8 pins
  for i in range(0,7):
  	#setting analog call string based on pin number for loop
- 	chan_call = f"{mcp}, {MCP}.P{i}"
+ 	chan_call = f"adafruit_mcp3xxx.mcp3008.MCP3008(spi, cs), adafruit_mcp3xxx.mcp3008.P{i}"
  	print(chan_call)
  	#creating pin object from analog input
  	chan = AnalogIn(chan_call)
