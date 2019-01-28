@@ -36,10 +36,10 @@ while True:
  #eventually make loop to go through all 8 pins
  for i in range(0,7):
  	#setting analog call string based on pin number for loop
- 	chan_call = str(mcp + ',' + ' '+ MCP + '.P' + i )
- 	print(chan_call)
+ 	#chan_call = str()
+ 	#print(chan_call)
  	#creating pin object from analog input
- 	chan = AnalogIn(chan_call) #need to find way to loop through pin number
+ 	chan = AnalogIn(mcp, MCP.Pi) #need to find way to loop through pin number
  	volt = chan.voltage
  	print(chan.voltage)
  	#converting raw data to voltage
