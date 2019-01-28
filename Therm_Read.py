@@ -45,11 +45,11 @@ while True:
  	else:
 	    volt = chan.voltage
  		#converting voltage to resesitance using KCL
- 		R = (R_div*(volt - 0.4125))/-volt
+ 	    R = (R_div*(volt - 0.4125))/-volt
  		#finding refrence fraction
- 		R_ref = R/R_div
+ 	    R_ref = R/R_div
  		#interpolating values from datasheet
- 		R_temp[i+1] = np.interp(R_ref,RtR,T_C)
+ 	    R_temp[i+1] = np.interp(R_ref,RtR,T_C)
 
  #Displaying Values
  print('R0 Temperature =' + str(R_temp[1]) + 'C\r', end="")
