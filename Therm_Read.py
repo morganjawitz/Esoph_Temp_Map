@@ -37,19 +37,19 @@ while True:
  for i in range(0,7):
  	#setting analog call string based on pin number for loop
  	chan_call = str("mcp, MCP.P%d" %i)
- 	#creating pin vector from analog input
- 	chan[i+1] = AnalogIn(chan_call)
- 	#converting raw data to voltage for volt array
- 	if chan[i+1] == 0:
+ 	#creating pin object from analog input
+ 	chan = AnalogIn(chan_call)
+ 	#converting raw data to voltage
+ 	if chan.value == 0:
  		R_temp[i+1] = str("Thermistor Error")
  	else:
-		volt[i+1] = chan[i+1].voltage
+		volt = chan.voltage
  		#converting voltage to resesitance using KCL
- 		R[i+1] = (R_div*(volt[i+1] - 0.4125))/-volt[i+1]
+ 		R = (R_div*(volt - 0.4125))/-volt
  		#finding refrence fraction
- 		R_ref = R[i+1]/R_div
+ 		R_ref = R/R_div
  		#interpolating values from datasheet
- 		R_temp[i+1] = np.interp(R_ref[i+1],RtR,T_C)
+ 		R_temp[i+1] = np.interp(R_ref,RtR,T_C)
 
  #Displaying Values
  print('R0 Temperature =' + str(R_temp[1]) + 'C\r', end="")
