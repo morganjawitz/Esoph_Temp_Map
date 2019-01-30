@@ -56,7 +56,7 @@ while True:
  #Displaying Values
 
  R_temp0 = np.around(R_temp[0], decimals=2)
- print('R0 Temperature =' + R_temp0 + 'C\r', end="")
+ print('R0 Temperature =' + str(R_temp0) + 'C\r', end="")
  #print('R1 Temperature =' + str(R_temp[1]) + 'C\r', end="")
  #print('R2 Temperature =' + str(R_temp[2]) + 'C\r', end="")
  #print('R3 Temperature =' + str(R_temp[3]) + 'C\r', end="")
