@@ -54,6 +54,7 @@ while True:
  		R_temp[i] = np.interp(R_ref,RtR,T_C)
 
  #Displaying Values
+
  print('R0 Temperature =' + str(R_temp[0]) + 'C\r', end="")
  print('R1 Temperature =' + str(R_temp[1]) + 'C\r', end="")
  print('R2 Temperature =' + str(R_temp[2]) + 'C\r', end="")
