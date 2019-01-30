@@ -55,7 +55,7 @@ while True:
 
  #Displaying Values
 
- print('R0 Temperature =' + str(R_temp[0]) + 'C\n' 'R1 Temperature =' + str(R_temp[1]) 'C\r', end="")
+ print('R0 Temperature =' + str(R_temp[0]) + 'C\n' 'R1 Temperature =' + str(R_temp[1]) + 'C\r', end="")
  #print('R1 Temperature =' + str(R_temp[1]) + 'C\r', end="")
  #print('R2 Temperature =' + str(R_temp[2]) + 'C\r', end="")
  #print('R3 Temperature =' + str(R_temp[3]) + 'C\r', end="")
