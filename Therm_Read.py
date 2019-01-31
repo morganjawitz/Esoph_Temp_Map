@@ -41,8 +41,19 @@ while True:
  	#creating pin object from analog input
  	#pin_num = str(MCP) + ".P" + str(i)
  	#chan = AnalogIn(mcp, pin_num) #need to find way to loop through pin number
+ 	
  	#creating array of pin values
-	chan = [AnalogIn(mcp, MCP.P0), AnalogIn(mcp, MCP.P1), AnalogIn(mcp, MCP.P2), AnalogIn(mcp, MCP.P3), AnalogIn(mcp, MCP.P4), AnalogIn(mcp, MCP.P5), AnalogIn(mcp, MCP.P6), AnalogIn(mcp, MCP.P7)]
+ 	pin0 = AnalogIn(mcp, MCP.P0)
+ 	pin1 = AnalogIn(mcp, MCP.P1)
+ 	pin2 = AnalogIn(mcp, MCP.P2)
+ 	pin3 = AnalogIn(mcp, MCP.P3)
+ 	pin4 = AnalogIn(mcp, MCP.P4)
+ 	pin5 = AnalogIn(mcp, MCP.P5)
+ 	pin6 = AnalogIn(mcp, MCP.P6)
+ 	pin7 = AnalogIn(mcp, MCP.P7)
+	chan = [pin0,pin1,pin2,pin3,pin4,pin5,pin6,pin7]
+ 	
+	#converting to voltage
  	volt = chan[i].voltage
  	#print(chan.voltage)
  	#converting raw data to voltage
