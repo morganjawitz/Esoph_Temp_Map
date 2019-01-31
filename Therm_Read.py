@@ -34,7 +34,7 @@ mcp = MCP.MCP3008(spi, cs)
 while True:
  # create an analog input channel on pin 7
  #eventually make loop to go through all 8 pins
- for i in range(0,7):
+ for i in range(0,8):
  	#setting analog call string based on pin number for loop
  	#chan_call = str()
  	#print(chan_call)
