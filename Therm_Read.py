@@ -68,7 +68,7 @@ while True:
 
  #Displaying Values
 
- temps = np.around(R_temp, decimals=1)
+ temps = np.around(R_temp, decimals=2)
  
  print(str(temps) + "\r", end="")
 
