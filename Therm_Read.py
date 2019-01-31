@@ -44,7 +44,7 @@ while True:
  	#print(chan.voltage)
  	#converting raw data to voltage
  	if volt == 0:
- 		R_temp[i] = str("Thermistor Error")
+ 		R_temp[i] = 404
  	else:
  		#converting voltage to resesitance using KCL
  		R = (R_div*(volt - 3.3))/-volt #should be 0.4125 not 3.3
@@ -56,17 +56,7 @@ while True:
  #Displaying Values
 
  temps = np.around(R_temp, decimals=2)
- #output = "R0 =" + str(temps[0])
-
-
-
- #print('R0 Temperature =' + str(temps[0]) + " " + 'R1 Temperature =' + str(temps[1]) + 'C\r', end="")
+ 
  print(str(temps) + "\r", end="")
- #print('R1 Temperature =' + str(R_temp[1]) + 'C\r', end="")
- #print('R2 Temperature =' + str(R_temp[2]) + 'C\r', end="")
- #print('R3 Temperature =' + str(R_temp[3]) + 'C\r', end="")
- #print('R4 Temperature =' + str(R_temp[4]) + 'C\r', end="")
- #print('R5 Temperature =' + str(R_temp[5]) + 'C\r', end="")
- #print('R6 Temperature =' + str(R_temp[6]) + 'C\r', end="")
- #print('R7 Temperature =' + str(R_temp[7]) + 'C\r', end="")
+
  time.sleep(0.5)
