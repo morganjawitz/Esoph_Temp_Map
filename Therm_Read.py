@@ -24,6 +24,7 @@ cs = digitalio.DigitalInOut(board.D5)
  
 # create the mcp object
 mcp = MCP.MCP3008(spi, cs)
+print(mcp)
  
 #Displaying results
 #print('Raw ADC Value: ', chan7.value)
@@ -40,7 +41,7 @@ while True:
  	#print(chan_call)
  	#creating pin object from analog input
  	pin_num = str(mcp) + str(MCP) + "." + str(i)
- 	chan = AnalogIn(eval(pin_num)) #need to find way to loop through pin number
+ 	chan = AnalogIn(mcp, MCP.P7) #need to find way to loop through pin number
  	volt = chan.voltage
  	#print(chan.voltage)
  	#converting raw data to voltage
