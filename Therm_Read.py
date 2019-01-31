@@ -58,7 +58,7 @@ while True:
  	#print(chan.voltage)
  	#converting raw data to voltage
  	if volt == 0:
- 		R_temp[i] = 404
+ 		R_temp[i] = 0000
  	else:
  		#converting voltage to resesitance using KCL
  		R = (R_div*(volt - 3.3))/-volt #should be 0.4125 not 3.3
