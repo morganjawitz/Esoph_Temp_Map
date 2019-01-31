@@ -39,7 +39,7 @@ while True:
  	#chan_call = str()
  	#print(chan_call)
  	#creating pin object from analog input
- 	pin_num = str(mcp) + str(MCP) + "." + i
+ 	pin_num = str(mcp) + str(MCP) + "." + str(i)
  	chan = AnalogIn(mcp, MCP.P7) #need to find way to loop through pin number
  	volt = chan.voltage
  	#print(chan.voltage)
