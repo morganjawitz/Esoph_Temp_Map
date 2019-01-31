@@ -58,7 +58,7 @@ while True:
 
  temps = np.around(R_temp, decimals=2)
  
- print(str(temps) + "\r", end="")
- #(str(pin_num) + "\r", end="")
+ #print(str(temps) + "\r", end="")
+ print(str(pin_num) + "\r", end="")
 
  time.sleep(0.5)
