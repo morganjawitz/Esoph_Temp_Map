@@ -43,15 +43,15 @@ while True:
  	#chan = AnalogIn(mcp, pin_num) #need to find way to loop through pin number
  	
  	#creating array of pin values
- 	pin0 = AnalogIn(mcp, MCP.P0)
- 	pin1 = AnalogIn(mcp, MCP.P1)
- 	pin2 = AnalogIn(mcp, MCP.P2)
- 	pin3 = AnalogIn(mcp, MCP.P3)
- 	pin4 = AnalogIn(mcp, MCP.P4)
- 	pin5 = AnalogIn(mcp, MCP.P5)
- 	pin6 = AnalogIn(mcp, MCP.P6)
- 	pin7 = AnalogIn(mcp, MCP.P7)
-	chan = [pin0,pin1,pin2,pin3,pin4,pin5,pin6,pin7]
+    pin0 = AnalogIn(mcp, MCP.P0)
+    pin1 = AnalogIn(mcp, MCP.P1)
+    pin2 = AnalogIn(mcp, MCP.P2)
+    pin3 = AnalogIn(mcp, MCP.P3)
+    pin4 = AnalogIn(mcp, MCP.P4)
+    pin5 = AnalogIn(mcp, MCP.P5)
+    pin6 = AnalogIn(mcp, MCP.P6)
+    pin7 = AnalogIn(mcp, MCP.P7)
+    chan = [pin0,pin1,pin2,pin3,pin4,pin5,pin6,pin7]
  	
 	#converting to voltage
  	volt = chan[i].voltage
