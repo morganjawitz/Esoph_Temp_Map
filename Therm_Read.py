@@ -36,8 +36,7 @@ while True:
  #eventually make loop to go through all 8 pins
  for i in range(0,8):
  	#setting analog call string based on pin number for loop
- 	#chan_call = str()
- 	#print(chan_call)
+ 	
  	#creating pin object from analog input
  	#pin_num = str(MCP) + ".P" + str(i)
  	#chan = AnalogIn(mcp, pin_num) #need to find way to loop through pin number
@@ -61,7 +60,7 @@ while True:
  		R_temp[i] = 0000
  	else:
  		#converting voltage to resesitance using KCL
- 		R = (R_div*(volt - 3.3))/-volt #should be 0.4125 not 3.3
+ 		R = (R_div*(volt - 3.3))/-volt #should be 0.4125 not 3.3 when all thermistors wired in
  		#finding refrence fraction
  		R_ref = R/R_div
  		#interpolating values from datasheet
