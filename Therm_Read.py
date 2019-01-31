@@ -40,7 +40,6 @@ while True:
  	#print(chan_call)
  	#creating pin object from analog input
  	pin_num = str(mcp) + str(MCP) + "." + str(i)
- 	print(str(pin_num) + "\r", end="")
  	chan = AnalogIn(mcp, MCP.P7) #need to find way to loop through pin number
  	volt = chan.voltage
  	#print(chan.voltage)
@@ -60,5 +59,6 @@ while True:
  temps = np.around(R_temp, decimals=2)
  
  print(str(temps) + "\r", end="")
+ print(str(pin_num) + "\r", end="")
 
  time.sleep(0.5)
