@@ -61,7 +61,7 @@ while True:
 
 
  #print('R0 Temperature =' + str(temps[0]) + " " + 'R1 Temperature =' + str(temps[1]) + 'C\r', end="")
- print(temps "\r", end="")
+ print(str(temps) + "\r", end="")
  #print('R1 Temperature =' + str(R_temp[1]) + 'C\r', end="")
  #print('R2 Temperature =' + str(R_temp[2]) + 'C\r', end="")
  #print('R3 Temperature =' + str(R_temp[3]) + 'C\r', end="")
