@@ -70,6 +70,6 @@ while True:
 
  temps = np.around(R_temp, decimals=2)
  
- print(str(temps[3]) + "\r", end="")
+ print(str(temps) + "\r", end="")
 
  time.sleep(0.5)
