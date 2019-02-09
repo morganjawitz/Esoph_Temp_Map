@@ -7,9 +7,7 @@ from Therm_Read_Test import Temp_Read #calling thermistor read function
 
 #initalizing graph
 fig = plt.figure()
-ax = fig.add_subplot(1,1,1)
-xs = []
-ys = []
+ax = fig.add_subplot(111, projection='3d')
 
 #need to initiate a 3D cylinder graph
 #Next pick 8 3D points on graph to represent thermistors
@@ -21,7 +19,7 @@ def animate(i,xs,ys):
 	
 	#plotting cylinder
 	x = np.linspace(-1,1,100)
-	z = np.linespace(0,3,100)
+	z = np.linspace(0,3,100)
 	Xc, Zc = np.meshgrid(x,z)
 	Yc = np.sqrt(1-Xc**2)
 
