@@ -15,7 +15,8 @@ def animate(i,xs,ys):
 	Temp = Temp_Read(1)
 	
 	#adding x and y to lists
-	xs.append(dt.datetime.now().strftime('%H:%M:%S.%f'))
+	time = dt.time
+	xs.append(time)
 	ys.append(Temp)
 
 	#limt x and y list to 20 items
