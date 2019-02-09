@@ -22,6 +22,14 @@ def animate(i):
 	Xc, Zc = np.meshgrid(x,z)
 	Yc = np.sqrt(1-Xc**2)
 
+	# Draw parameters
+	rstride = 20
+	cstride = 10
+	ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride)
+	ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride)
+
+
+
 
 	
 
