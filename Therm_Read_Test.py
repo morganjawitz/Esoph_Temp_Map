@@ -6,8 +6,8 @@ import board
 import adafruit_mcp3xxx.mcp3008 as MCP #library for interfacing with ADC
 from adafruit_mcp3xxx.analog_in import AnalogIn #function for reading analong pin
 
-
-def Temp_Read():
+#x is the desired thermistor of interest
+def Temp_Read(x):
 
  
 	#Creataing interpolation arrays for therm, found in therm datasheet
@@ -79,8 +79,8 @@ def Temp_Read():
 
 	#time.sleep(0.5)
 
-	return temps
+	return temps[x]
 
 
 
-print(Temp_Read())
+print(Temp_Read(1))
