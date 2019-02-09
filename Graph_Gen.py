@@ -26,7 +26,7 @@ def animate(i):
 	
 
 #set up plot to call animate() function periodically
-ani = animation.FuncAnimation(fig, animate, fargs=(1), interval=1000)
+ani = animation.FuncAnimation(fig, animate, fargs=1, interval=1000)
 plt.show()
 
 
