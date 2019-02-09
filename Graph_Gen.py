@@ -14,7 +14,7 @@ ax = fig.add_subplot(111, projection='3d')
 
 def animate(i):
 	#reading temperature
-	Temp = Temp_Read(i)
+	Temp = Temp_Read(1)
 	
 	#plotting cylinder
 	x = np.linspace(-1,1,100)
