@@ -19,7 +19,7 @@ def animate(i):
 	#scatter points
 	theta = 0
 
-	for i in range(0,7)
+	for i in range(0,7):
 		x[i] = r*sin(theta)
 		y[i] = r*cos(theta)
 		z[i] = i*15
