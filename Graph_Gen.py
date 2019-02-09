@@ -1,5 +1,6 @@
 import numpy as np
 import datetime as dt
+import time
 import matplotlib.pyplot as plt
 from matplotlib import animation
 from Therm_Read_Test import Temp_Read #calling thermistor read function
@@ -15,8 +16,7 @@ def animate(i,xs,ys):
 	Temp = Temp_Read(1)
 	
 	#adding x and y to lists
-	time = dt.time
-	xs.append(time)
+	xs.append(time.strftime('%l:%M%p'))
 	ys.append(Temp)
 
 	#limt x and y list to 20 items
