@@ -7,7 +7,7 @@ import adafruit_mcp3xxx.mcp3008 as MCP #library for interfacing with ADC
 from adafruit_mcp3xxx.analog_in import AnalogIn #function for reading analong pin
 
 
-def Temp_Read()
+def Temp_Read(x=8)
 
  
 	#Creataing interpolation arrays for therm, found in therm datasheet
@@ -36,10 +36,10 @@ def Temp_Read()
 	#print('R7 =' + str(R7))
 	#print('R_ref =' + str(R7_ref))
 
-	while True:
+	#while True:
  	# create an analog input channel on pin 7
  	#eventually make loop to go through all 8 pins
- 	for i in range(0,8):
+ 	for i in range(0,x):
  		#setting analog call string based on pin number for loop
  	
  		#creating pin object from analog input
