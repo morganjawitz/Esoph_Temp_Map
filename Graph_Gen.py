@@ -21,12 +21,12 @@ def animate(i):
 	r = 1
 
 	for i in range(0,7):
-		x[i] = r*np.sin(theta)
-		y[i] = r*np.cos(theta)
-		z[i] = i*15
+		xs[i] = r*np.sin(theta)
+		ys[i] = r*np.cos(theta)
+		zs[i] = i*15
 		theta = theta + (np.pi/2)
 
-	ax.scatter(x,y,z)
+	ax.scatter(xs,ys,zs)
 
 	#plotting cylinder
 	x = np.linspace(-1,1,100)
