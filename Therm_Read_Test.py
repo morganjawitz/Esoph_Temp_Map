@@ -75,12 +75,12 @@ def Temp_Read():
 
 	temps = np.around(R_temp, decimals=2)
  
-	print(str(temps) + "\r", end="")
+	#print(str(temps) + "\r", end="")
 
-	time.sleep(0.5)
+	#time.sleep(0.5)
 
 	return temps
 
-Temp_Read()
 
-print(temps)
+
+print(Temp_Read())
