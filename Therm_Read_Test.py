@@ -83,4 +83,4 @@ def Temp_Read(x):
 
 
 
-print(Temp_Read(1))
+#print(Temp_Read(1))
