@@ -12,7 +12,12 @@ ax = fig.add_subplot(111, projection='3d')
 #Next pick 8 3D points on graph to represent thermistors
 #then label each point with the therm reading
 
-def animate(i):
+xs = []
+ys = []
+zs = []
+
+
+def animate(i,xs,ys,zs):
 	#reading temperature
 	Temp = Temp_Read(1)
 	
@@ -46,7 +51,7 @@ def animate(i):
 	
 
 #set up plot to call animate() function periodically
-ani = animation.FuncAnimation(fig, animate, interval=1000)
+ani = animation.FuncAnimation(fig, animate, fargs = (xs, ys, zs) interval=1000)
 plt.show()
 
 
