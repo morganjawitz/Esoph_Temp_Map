@@ -12,9 +12,9 @@ ax = fig.add_subplot(111, projection='3d')
 #Next pick 8 3D points on graph to represent thermistors
 #then label each point with the therm reading
 
-xs = []
-ys = []
-zs = []
+xs = np.zeros(8, dtype=int)
+ys = np.zeros(8, dtype=int)
+zs = np.zeros(8, dtype=int)
 
 
 def animate(i,xs,ys,zs):
