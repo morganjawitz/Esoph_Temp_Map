@@ -16,6 +16,17 @@ def animate(i):
 	#reading temperature
 	Temp = Temp_Read(1)
 	
+	#scatter points
+	theta = 0
+
+	for i in range(0,7)
+		x[i] = r*sin(theta)
+		y[i] = r*cos(theta)
+		z[i] = i*15
+		theta = theta + 90
+
+	ax.scatter(x,y,z)
+
 	#plotting cylinder
 	x = np.linspace(-1,1,100)
 	z = np.linspace(0,3,100)
