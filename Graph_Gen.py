@@ -35,7 +35,7 @@ def animate(i,xs,ys,zs):
 
 	#plotting cylinder
 	x = np.linspace(-1,1,100)
-	z = np.linspace(0,3,100)
+	z = np.linspace(0,105,100)
 	Xc, Zc = np.meshgrid(x,z)
 	Yc = np.sqrt(1-Xc**2)
 
