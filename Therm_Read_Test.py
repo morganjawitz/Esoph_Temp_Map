@@ -39,7 +39,7 @@ def Temp_Read():
 	#while True:
  	# create an analog input channel on pin 7
  	#eventually make loop to go through all 8 pins
- 	for i in range(0,8):
+	for i in range(0,8):
  		#setting analog call string based on pin number for loop
  	
  		#creating pin object from analog input
