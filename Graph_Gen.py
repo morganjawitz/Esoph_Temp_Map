@@ -42,8 +42,11 @@ def animate(i,xs,ys,zs):
 	# Draw parameters
 	rstride = 20
 	cstride = 10
-	ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride)
-	ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride)
+	#ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride)
+	#ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride)
+	ax.plot_wireframe(Xc,Yc, Zc, rstride = rstride, cstride = cstride)
+	ax.plot_wireframe(Xc,-Yc, Zc, rstride = rstride, cstride = cstride)
+	
 
 
 
