@@ -35,7 +35,7 @@ def animate(i,xs,ys,zs):
 
 	#plotting temp annotations
 	#label = str('%d' %Temp)
-	ax.text(xs[1]+5,ys[1]+5,zs[1]+5, '%d' %Temp)
+	ax.text(xs[1],ys[1],zs[1], '%d' %Temp)
 
 	#plotting cylinder
 	x = np.linspace(-1,1,100)
