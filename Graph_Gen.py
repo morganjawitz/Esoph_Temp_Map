@@ -37,7 +37,7 @@ def animate(i,xs,ys,zs):
 	#label = str('%d' %Temp)
 	
 	#clearing the plot
-	clf()
+	plt.clf()
 
 	for p in range(0,7):
 		Temp = Temp_Read(p) #reading temperature
