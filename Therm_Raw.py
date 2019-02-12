@@ -1,5 +1,6 @@
 from Therm_Read_Test import Temp_Read
 import numpy as np
+import time
 
 Temps = np.zeros(4, dtype=int)
 
