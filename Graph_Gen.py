@@ -25,8 +25,6 @@ for i in range(0,7):
 	zs[i] = i*15
 	theta = theta + (np.pi/2)
 
-print(xs)
-
 
 def animate(i,xs,ys,zs):
 	#reading temperature
@@ -34,6 +32,9 @@ def animate(i,xs,ys,zs):
 
 
 	ax.scatter(xs,ys,zs)
+
+	#plotting temp annotations
+	ax.annotate(Temp, xyz=(xs[1],ys[1],zs[1]), xytext=(xs[1]+5, ys[1]+5, zs[1]+5))
 
 	#plotting cylinder
 	x = np.linspace(-1,1,100)
