@@ -28,14 +28,16 @@ for i in range(0,7):
 
 def animate(i,xs,ys,zs):
 	#reading temperature
-	Temp = Temp_Read(1)
+	#Temp = Temp_Read(1)
 
 
 	ax.scatter(xs,ys,zs)
 
 	#plotting temp annotations
 	#label = str('%d' %Temp)
-	ax.text(xs[1],ys[1],zs[1], '%d' %Temp)
+	for p in range(0,7)
+		Temp = Temp_Read[p] #reading temperature
+		ax.text(xs[p],ys[p],zs[p], '%d' %Temp) #plotting temp at points
 
 	#plotting cylinder
 	x = np.linspace(-1,1,100)
