@@ -37,6 +37,7 @@ def animate(i,xs,ys,zs):
 	#label = str('%d' %Temp)
 	for p in range(0,7):
 		Temp = Temp_Read(p) #reading temperature
+		ax.text(xs[p],ys[p],zs[p], '    ')
 		ax.text(xs[p],ys[p],zs[p], '%.2f' %Temp) #plotting temp at points
 
 	#plotting cylinder
