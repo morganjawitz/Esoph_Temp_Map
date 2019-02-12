@@ -3,5 +3,5 @@ import numpy as np
 
 while true:
 	for i in range(0,3):
-		Temps(i) = Temp_Read(i)
+		Temps[i] = Temp_Read(i)
 	print(Temps) 
