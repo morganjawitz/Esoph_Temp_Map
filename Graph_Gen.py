@@ -19,17 +19,19 @@ zs = np.zeros(8, dtype=int)
 #creating initial temp plot locations in 3D
 theta = 0
 r = 1
-for i in range(0,7)
+for i in range(0,7):
 	xs[i] = r*np.sin(theta)
 	ys[i] = r*np.cos(theta)
 	zs[i] = i*15
 	theta = theta + (np.pi/2)
 
+print(xs)
+
 
 def animate(i,xs,ys,zs):
 	#reading temperature
 	Temp = Temp_Read(1)
-	
+
 
 	ax.scatter(xs,ys,zs)
 
