@@ -34,8 +34,8 @@ def animate(i,xs,ys,zs):
 	ax.scatter(xs,ys,zs)
 
 	#plotting temp annotations
-	label = str('%d' %Temp)
-	ax.text(xs[1]+5,ys[1]+5,zs[1]+5, label)
+	#label = str('%d' %Temp)
+	ax.text(xs[1]+5,ys[1]+5,zs[1]+5, '%d' %Temp)
 
 	#plotting cylinder
 	x = np.linspace(-1,1,100)
