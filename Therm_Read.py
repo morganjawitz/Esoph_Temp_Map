@@ -14,7 +14,7 @@ RtR = [0.2966,0.3479,0.4100,0.4853,0.5770,0.6895,0.8282,1.0000,1.2142,1.4827,1.8
 R_div = 10E3
 
 #Creating R_Temp array
-R_temp = np.zeros(4, dtype=int)
+R_temp = [0,0,0,0]
 
 # create the spi bus
 spi = busio.SPI(clock=board.SCK, MISO=board.MISO, MOSI=board.MOSI)
