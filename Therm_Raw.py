@@ -6,7 +6,7 @@ Temps = [0,0,0,0]
 
 while True:
 	for i in range(0,3):
-		Temps[i] = np.around(Temp_Read(i), decimal=2)
+		Temps[i] = np.around(Temp_Read(i), decimals=2)
 	
 	 
 	print(str(Temps) + "\r", end="" )
