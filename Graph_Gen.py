@@ -40,8 +40,8 @@ def animate(i,xs,ys,zs):
 	for p in range(0,7):
 		Temp = Temp_Read(p) #reading temperature
 		
-		ax.text(xs[p],ys[p],zs[p]).remove()
-		ax.text(xs[p],ys[p],zs[p], '%.2f\r' %Temp) #plotting temp at points
+		ax.text(xs[p],ys[p],zs[p], '%.2f' %Temp).remove() #removing the old temp plot
+		ax.text(xs[p],ys[p],zs[p], '%.2f' %Temp) #plotting temp at points
 
 	#plotting cylinder
 	x = np.linspace(-1,1,100)
