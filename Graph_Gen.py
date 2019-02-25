@@ -20,10 +20,10 @@ zs = np.zeros(8, dtype=int)
 theta = 0
 r = 1
 for i in range(0,7):
-	xs[i] = r*np.sin(theta)
-	ys[i] = r*np.cos(theta)
-	zs[i] = i*15
-	theta = theta + (np.pi/2)
+	xs[i] = r*np.sin(theta) #defining x points of thermistor points
+	ys[i] = r*np.cos(theta) #defining y points of thermistor points
+	zs[i] = i*15 #z steps for thermistors
+	theta = theta + (np.pi/2) #rotation for cylinderical points
 
 
 def animate(i,xs,ys,zs):
@@ -31,7 +31,7 @@ def animate(i,xs,ys,zs):
 	#Temp = Temp_Read(1)
 
 
-	ax.scatter(xs,ys,zs)
+	ax.scatter(xs,ys,zs) #plotting thermistor points
 
 	#plotting temp annotations
 	#label = str('%d' %Temp)
@@ -40,7 +40,7 @@ def animate(i,xs,ys,zs):
 	for p in range(0,7):
 		Temp = Temp_Read(p) #reading temperature
 		ax.text(xs[p],ys[p],zs[p], '    ')
-		ax.text(xs[p],ys[p],zs[p], '%.2f' %Temp) #plotting temp at points
+		ax.text(xs[p],ys[p],zs[p], '%.2f\r' %Temp) #plotting temp at points
 
 	#plotting cylinder
 	x = np.linspace(-1,1,100)
