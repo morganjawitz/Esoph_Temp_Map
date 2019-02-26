@@ -18,7 +18,7 @@ zs = np.zeros(8, dtype=int)
 
 #creating initial temp plot locations in 3D
 theta = 0
-r = 1
+r = 3
 for i in range(0,7):
 	xs[i] = r*np.sin(theta) #defining x points of thermistor points
 	ys[i] = r*np.cos(theta) #defining y points of thermistor points
@@ -49,7 +49,7 @@ def animate(i,xs,ys,zs):
 		ann_list.append(ann) #adding new annotation to ann_list
 
 	#plotting cylinder
-	x = np.linspace(-1,1,100)
+	x = np.linspace(-3,3,100)
 	z = np.linspace(0,105,100)
 	Xc, Zc = np.meshgrid(x,z)
 	Yc = np.sqrt(1-Xc**2)
