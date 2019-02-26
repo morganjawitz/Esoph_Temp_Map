@@ -53,7 +53,7 @@ def animate(i,xs,ys,zs):
 	x = np.linspace(-D,D,100)
 	z = np.linspace(0,105,100)
 	Xc, Zc = np.meshgrid(x,z)
-	Yc = np.sqrt(D-Xc**2)
+	Yc = np.sqrt(1-Xc**2)
 
 	# Draw parameters
 	rstride = 20
