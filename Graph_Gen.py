@@ -25,6 +25,8 @@ for i in range(0,7):
 	zs[i] = i*15 #z steps for thermistors
 	theta = theta + (np.pi/2) #rotation for cylinderical points
 
+ann_list = [] #generating empty annotations list
+
 
 def animate(i,xs,ys,zs):
 	#reading temperature
@@ -35,13 +37,16 @@ def animate(i,xs,ys,zs):
 
 	#plotting temp annotations
 	#label = str('%d' %Temp)
+
+	for c, a in enumerate(ann_list):
+		a.remove() #removing current annotations
+	ann_list[:] = [] #reseting annotation list before making new annotations
 	
 
 	for p in range(0,7):
 		Temp = Temp_Read(p) #reading temperature
-		
-		ax.text(xs[p],ys[p],zs[p], '%.2f' %Temp).remove() #removing the old temp plot
-		ax.text(xs[p],ys[p],zs[p], '%.2f' %Temp) #plotting temp at points
+		ann = ax.text(xs[p],ys[p],zs[p], '%.2f' %Temp) #plotting temp at points
+		ann_list.append(ann) #adding new annotation to ann_list
 
 	#plotting cylinder
 	x = np.linspace(-1,1,100)
