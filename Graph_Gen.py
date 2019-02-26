@@ -49,10 +49,10 @@ def animate(i,xs,ys,zs):
 		ann_list.append(ann) #adding new annotation to ann_list
 
 	#plotting cylinder
-	x = np.linspace(-3,3,100)
+	x = np.linspace(-r,r,100)
 	z = np.linspace(0,105,100)
 	Xc, Zc = np.meshgrid(x,z)
-	Yc = np.sqrt(1-Xc**2)
+	Yc = np.sqrt(r-Xc**2)
 
 	# Draw parameters
 	rstride = 20
