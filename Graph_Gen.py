@@ -56,7 +56,7 @@ def animate(i,xs,ys,zs):
 	x = np.linspace(-D,D,100)
 	z = np.linspace(0,105,100)
 	Xc, Zc = np.meshgrid(x,z)
-	Yc = np.sqrt(D-Xc**2)
+	Yc = np.sqrt(D**2-Xc**2)
 
 	#setting colormap
 	colors = cm.ScalarMappable(cmap = "coolwarm").to_rgba(Temps)
