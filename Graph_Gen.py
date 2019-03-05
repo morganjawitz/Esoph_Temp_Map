@@ -44,7 +44,7 @@ cstride = 10
 surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.05, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.05, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 
-def animate(i,xs,ys,zs):
+def animate(i,xs,ys,zs,surf1,surf2):
 	#reading temperature
 	#Temp = Temp_Read(1)
 
@@ -93,7 +93,7 @@ def animate(i,xs,ys,zs):
 	
 
 #set up plot to call animate() function periodically
-ani = animation.FuncAnimation(fig, animate, fargs = (xs, ys, zs), interval=1000)
+ani = animation.FuncAnimation(fig, animate, fargs = (xs, ys, zs, surf1, surf2), interval=1000)
 plt.show()
 
 
