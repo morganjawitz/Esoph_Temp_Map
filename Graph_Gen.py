@@ -59,13 +59,13 @@ def animate(i,xs,ys,zs):
 	Yc = np.sqrt(r**2-Xc**2)
 
 	#setting colormap
-	colors = cm.ScalarMappable(cmap = "coolwarm").to_rgba(Temps)
+	#colors = cm.ScalarMappable(cmap = "coolwarm").to_rgba(Temps)
 
 	# Draw parameters
 	rstride = 20
 	cstride = 10
-	ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, facecolors=colors)
-	ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, facecolors=colors)
+	ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=false)
+	ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=false)
 	#ax.plot_wireframe(Xc,Yc, Zc, rstride = rstride, cstride = cstride)
 	#ax.plot_wireframe(Xc,-Yc, Zc, rstride = rstride, cstride = cstride)
 
