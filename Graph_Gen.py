@@ -29,6 +29,8 @@ for i in range(0,7):
 	theta = theta + (np.pi/2) #rotation for cylinderical points
 
 ann_list = [] #generating empty annotations list
+surf1 = []
+surf2 = []
 
 
 def animate(i,xs,ys,zs):
@@ -64,9 +66,11 @@ def animate(i,xs,ys,zs):
 	# Draw parameters
 	rstride = 20
 	cstride = 10
-	ax.clear()
-	ax.plot_surface(Xc, Yc, Zc, alpha=0.05, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
-	ax.plot_surface(Xc, -Yc, Zc, alpha=0.05, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
+	
+	surf1.remove()
+	surf2.remove()
+	surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.05, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
+	surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.05, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 
 	#ax.plot_wireframe(Xc,Yc, Zc, rstride = rstride, cstride = cstride)
 	#ax.plot_wireframe(Xc,-Yc, Zc, rstride = rstride, cstride = cstride)
