@@ -15,6 +15,7 @@ ax = fig.add_subplot(111, projection='3d')
 xs = np.zeros(8, dtype=int)
 ys = np.zeros(8, dtype=int)
 zs = np.zeros(8, dtype=int)
+Temps = np.zeros(8, dtype=int)
 
 #creating initial temp plot locations in 3D
 theta = 0
@@ -34,7 +35,7 @@ def animate(i,xs,ys,zs):
 	#Temp = Temp_Read(1)
 
 
-	ax.scatter(xs,ys,zs) #plotting thermistor points
+	ax.scatter(xs,ys,zs,c='black') #plotting thermistor points
 
 	#plotting temp annotations
 	#label = str('%d' %Temp)
@@ -46,6 +47,7 @@ def animate(i,xs,ys,zs):
 
 	for p in range(0,7):
 		Temp = Temp_Read(p) #reading temperature
+		Temps(p) = Temp_Read(p)
 		ann = ax.text(xs[p],ys[p],zs[p], '%.2f' %Temp) #plotting temp at points
 		ann_list.append(ann) #adding new annotation to ann_list
 
@@ -55,13 +57,17 @@ def animate(i,xs,ys,zs):
 	Xc, Zc = np.meshgrid(x,z)
 	Yc = np.sqrt(D-Xc**2)
 
+	#setting colormap
+	colors = cm.ScalarMappable(cmap = "coolwarm").to_rgba(Temps)
+
 	# Draw parameters
 	rstride = 20
 	cstride = 10
-	#ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride)
-	#ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride)
-	ax.plot_wireframe(Xc,Yc, Zc, rstride = rstride, cstride = cstride)
-	ax.plot_wireframe(Xc,-Yc, Zc, rstride = rstride, cstride = cstride)
+	ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, facecolors=colors)
+	ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, facecolors=colors)
+	#ax.plot_wireframe(Xc,Yc, Zc, rstride = rstride, cstride = cstride)
+	#ax.plot_wireframe(Xc,-Yc, Zc, rstride = rstride, cstride = cstride)
+
 	
 
 
