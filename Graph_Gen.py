@@ -64,7 +64,7 @@ def animate(i,xs,ys,zs):
 	# Draw parameters
 	rstride = 20
 	cstride = 10
-	Ax.clear()
+	ax.clear()
 	ax.plot_surface(Xc, Yc, Zc, alpha=0.05, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 	ax.plot_surface(Xc, -Yc, Zc, alpha=0.05, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 
