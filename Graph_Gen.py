@@ -47,7 +47,7 @@ def animate(i,xs,ys,zs):
 
 	for p in range(0,7):
 		Temp = Temp_Read(p) #reading temperature
-		Temps(p) = Temp_Read(p)
+		Temps[p] = Temp_Read(p)
 		ann = ax.text(xs[p],ys[p],zs[p], '%.2f' %Temp) #plotting temp at points
 		ann_list.append(ann) #adding new annotation to ann_list
 
