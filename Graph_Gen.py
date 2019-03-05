@@ -30,7 +30,19 @@ for i in range(0,7):
 
 ann_list = [] #generating empty annotations list
 
+#plotting cylinder
+x = np.linspace(-r,r,100)
+z = np.linspace(0,105,100)
+Xc, Zc = np.meshgrid(x,z)
+Yc = np.sqrt(r**2-Xc**2)
 
+# Draw parameters
+rstride = 20
+cstride = 10
+	
+#plotting the original surface plot
+surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.05, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
+surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.05, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 
 def animate(i,xs,ys,zs):
 	#reading temperature
@@ -53,11 +65,7 @@ def animate(i,xs,ys,zs):
 		ann = ax.text(xs[p],ys[p],zs[p], '%.2f' %Temp) #plotting temp at points
 		ann_list.append(ann) #adding new annotation to ann_list
 
-	#plotting cylinder
-	x = np.linspace(-r,r,100)
-	z = np.linspace(0,105,100)
-	Xc, Zc = np.meshgrid(x,z)
-	Yc = np.sqrt(r**2-Xc**2)
+
 
 	#setting colormap
 	#colors = cm.ScalarMappable(cmap = "coolwarm").to_rgba(Temps)
@@ -66,11 +74,13 @@ def animate(i,xs,ys,zs):
 	rstride = 20
 	cstride = 10
 	
+	#removing the surf plots before replotting
+	surf1.remove() 
+	surf2.remove()
 
+	#plot the surface with new colors
 	surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.05, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 	surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.05, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
-	surf1.remove()
-	surf2.remove()
 
 	#ax.plot_wireframe(Xc,Yc, Zc, rstride = rstride, cstride = cstride)
 	#ax.plot_wireframe(Xc,-Yc, Zc, rstride = rstride, cstride = cstride)
