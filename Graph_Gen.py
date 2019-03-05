@@ -53,10 +53,10 @@ def animate(i,xs,ys,zs):
 		ann_list.append(ann) #adding new annotation to ann_list
 
 	#plotting cylinder
-	x = np.linspace(-D,D,100)
+	x = np.linspace(-r,r,100)
 	z = np.linspace(0,105,100)
 	Xc, Zc = np.meshgrid(x,z)
-	Yc = np.sqrt(D**2-Xc**2)
+	Yc = np.sqrt(r**2-Xc**2)
 
 	#setting colormap
 	colors = cm.ScalarMappable(cmap = "coolwarm").to_rgba(Temps)
