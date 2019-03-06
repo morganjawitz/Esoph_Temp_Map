@@ -41,10 +41,10 @@ rstride = 20
 cstride = 10
 	
 #plotting the original surface plot
-#surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
-#surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
+surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
+surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 
-def animate(i,xs,ys,zs):
+def animate(i,xs,ys,zs,Xc,Zc,Yc,surf1,surf2):
 	#reading temperature
 	#Temp = Temp_Read(1)
 
@@ -75,22 +75,22 @@ def animate(i,xs,ys,zs):
 	cstride = 10
 	
 	#removing the surf plots before replotting
-	#surf1.remove() 
-	#surf2.remove()
+	surf1.remove() 
+	surf2.remove()
 
 	#plot the surface with new colors
-	#surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
-	#surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
+	surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
+	surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 
 
-	ax.plot_wireframe(Xc,Yc, Zc, rstride = rstride, cstride = cstride)
-	ax.plot_wireframe(Xc,-Yc, Zc, rstride = rstride, cstride = cstride)
+	#ax.plot_wireframe(Xc,Yc, Zc, rstride = rstride, cstride = cstride)
+	#ax.plot_wireframe(Xc,-Yc, Zc, rstride = rstride, cstride = cstride)
 
 	
 	
 
 #set up plot to call animate() function periodically
-ani = animation.FuncAnimation(fig, animate, fargs = (xs, ys, zs), interval=1000)
+ani = animation.FuncAnimation(fig, animate, fargs = (xs, ys, zs, Xc, Zc, Yc, surf1, surf2), interval=1000)
 plt.show()
 
 
