@@ -79,8 +79,8 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,surf1,surf2):
 	#surf2.remove()
 
 	#plot the surface with new colors
-	surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
-	surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
+	#surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
+	#surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 
 
 	#ax.plot_wireframe(Xc,Yc, Zc, rstride = rstride, cstride = cstride)
