@@ -25,7 +25,7 @@ D = r*2
 for i in range(0,8):
 	xs[i] = r*np.sin(theta) #defining x points of thermistor points
 	ys[i] = r*np.cos(theta) #defining y points of thermistor points
-	zs[i] = (i-1)*15 #z steps for thermistors
+	zs[i] = i*15 #z steps for thermistors
 	theta = theta + (np.pi/2) #rotation for cylinderical points
 
 ann_list = [] #generating empty annotations list
