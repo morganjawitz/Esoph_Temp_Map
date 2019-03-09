@@ -9,9 +9,9 @@ from Therm_Read_Test import Temp_Read #calling thermistor read function
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
-#need to initiate a 3D cylinder graph
-#Next pick 8 3D points on graph to represent thermistors
-#then label each point with the therm reading
+# Initiate a 3D cylinder graph
+# Next pick 8 3D points on graph to represent thermistors
+# Then label each point with the therm reading
 
 xs = np.zeros(8, dtype=int)
 ys = np.zeros(8, dtype=int)
@@ -29,6 +29,8 @@ for i in range(0,7):
 	theta = theta + (np.pi/2) #rotation for cylinderical points
 
 ann_list = [] #generating empty annotations list
+
+print(xs)
 
 #plotting cylinder
 x = np.linspace(-r,r,100)
