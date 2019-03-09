@@ -32,6 +32,7 @@ ann_list = [] #generating empty annotations list
 
 #print(xs)
 #print(ys)
+print(theta)
 
 #plotting cylinder
 x = np.linspace(-r,r,100)
