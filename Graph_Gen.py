@@ -67,7 +67,15 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,surf1,surf2):
 	for p in range(0,8):
 		Temp = Temp_Read(p) #reading temperature
 		Temps[p] = Temp_Read(p)
-		ann = ax.text(xs[p],ys[p],zs[p], '%.2f' %Temp) #plotting temp at points
+		
+		if Temp <= 20: #labling temp points to indicate if they are too hot or too cold
+			ann = ax.text(xs[p],ys[p],zs[p], '%.2f' %Temp, color = 'blue') #plotting temp at points
+		else if Temp >= 38:
+			ann = ax.text(xs[p],ys[p],zs[p], '%.2f' %Temp, color = 'red')
+		else:
+			ann = ax.text(xs[p],ys[p],zs[p], '%.2f' %Temp, color = 'black')
+
+
 		ann_list.append(ann) #adding new annotation to ann_list
 
 
