@@ -39,6 +39,8 @@ z = np.linspace(0,105,100)
 Xc, Zc = np.meshgrid(x,z)
 Yc = np.sqrt(r**2-Xc**2)
 
+print(Xc)
+
 # Draw parameters
 rstride = 20
 cstride = 10
@@ -89,13 +91,13 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,surf1,surf2):
 	#surf1.remove() 
 	#surf2.remove()
 
-	T, Zc = np.meshgrid(Temp,z)
 	
-	colors = cm.coolwarm(T/float(T.max()))
+	
+	#colors = cm.coolwarm(T/float(T.max()))
 
 	#plot the surface with new colors
-	surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, facecolors=colors, linewidth=0, antialiased=False)
-	surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, facecolors=colors, linewidth=0, antialiased=False)
+	#surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap = cm.coolwarm, linewidth=0, antialiased=False)
+	#surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap = cm.coolwarm, linewidth=0, antialiased=False)
 
 
 	#ax.plot_wireframe(Xc,Yc, Zc, rstride = rstride, cstride = cstride)
