@@ -41,9 +41,9 @@ Yc = np.sqrt(r**2-Xc**2)
 
 
 # Draw parameters
-rstride = 1
-cstride = 1
-	
+rstride = 10
+cstride = 10
+
 #plotting the original surface plot
 
 surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
