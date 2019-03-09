@@ -45,12 +45,6 @@ Yc = np.sqrt(r**2-Xc**2)
 rstride = 10
 cstride = 10
 
-#plotting the original surface plot
-
-#surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
-#surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
-
-#surf_list = [surf1, surf2]
 
 def animate(i,xs,ys,zs,Xc,Zc,Yc):
 	#reading temperature
@@ -59,8 +53,6 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 
 	ax.scatter(xs,ys,zs,c='black') #plotting thermistor points
 
-	#plotting temp annotations
-	#label = str('%d' %Temp)
 
 	for c, a in enumerate(ann_list):
 		a.remove() #removing current annotations
@@ -107,10 +99,6 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 	#adding the new surf plots to surf_list
 	surf_list.append(surf1)
 	surf_list.append(surf2)
-
-
-	#ax.plot_wireframe(Xc,Yc, Zc, rstride = rstride, cstride = cstride)
-	#ax.plot_wireframe(Xc,-Yc, Zc, rstride = rstride, cstride = cstride)
 
 	
 	
