@@ -30,8 +30,8 @@ for i in range(0,7):
 
 ann_list = [] #generating empty annotations list
 
-print(xs)
-print(ys)
+#print(xs)
+#print(ys)
 
 #plotting cylinder
 x = np.linspace(-r,r,100)
