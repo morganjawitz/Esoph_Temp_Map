@@ -36,6 +36,7 @@ ann_list = [] #generating empty annotations list
 #plotting cylinder
 x = np.linspace(-r,r,100)
 z = np.linspace(0,105,100)
+y = np.sqrt(r**2-x**2)
 Xc, Zc = np.meshgrid(x,z)
 Yc = np.sqrt(r**2-Xc**2)
 
@@ -46,8 +47,9 @@ rstride = 20
 cstride = 10
 	
 #plotting the original surface plot
-surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
-surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
+ax.plot_trisurf(x,y,z)
+#surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
+#surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 
 def animate(i,xs,ys,zs,Xc,Zc,Yc,surf1,surf2):
 	#reading temperature
