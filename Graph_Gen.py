@@ -70,7 +70,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,surf1,surf2):
 		
 		if Temp <= 20: #labling temp points to indicate if they are too hot or too cold
 			ann = ax.text(xs[p],ys[p],zs[p], '%.2f' %Temp, color = 'blue') #plotting temp at points
-		else if Temp >= 38:
+		elif Temp >= 38:
 			ann = ax.text(xs[p],ys[p],zs[p], '%.2f' %Temp, color = 'red')
 		else:
 			ann = ax.text(xs[p],ys[p],zs[p], '%.2f' %Temp, color = 'black')
