@@ -105,7 +105,6 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 
 #set up plot to call animate() function periodically
 ani = animation.FuncAnimation(fig, animate, fargs = (xs, ys, zs, Xc, Zc, Yc), interval=1000)
-ax.set_zlim([min(z), max(z)])
 plt.show()
 
 
