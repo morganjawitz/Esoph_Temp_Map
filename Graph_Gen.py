@@ -89,7 +89,9 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,surf1,surf2):
 	#surf1.remove() 
 	#surf2.remove()
 
-	colors = cm.coolwarm(Temp/float(Temp.max()))
+	T, Zc = np.meshgrid(Temp,z)
+	
+	colors = cm.coolwarm(T/float(T.max()))
 
 	#plot the surface with new colors
 	surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, facecolors=colors, linewidth=0, antialiased=False)
