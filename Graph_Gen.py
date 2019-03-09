@@ -54,7 +54,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,surf1,surf2):
 	#Temp = Temp_Read(1)
 
 
-	ax.scatter(xs[0,7],ys[0,7],zs[0,7],c='black') #plotting thermistor points
+	ax.scatter(xs[1,8],ys[1,8],zs[1,8],c='black') #plotting thermistor points
 
 	#plotting temp annotations
 	#label = str('%d' %Temp)
