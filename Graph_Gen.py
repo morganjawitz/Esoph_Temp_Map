@@ -99,8 +99,8 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 	#colors = cm.coolwarm(T/float(T.max()))
 
 	#plot the surface with new colors, adding new elements to surf_list to be plotted
-	surf_list[1] = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap = cm.coolwarm, linewidth=0, antialiased=False)
-	surf_list[2] = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap = cm.coolwarm, linewidth=0, antialiased=False)
+	surf_list[0] = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap = cm.coolwarm, linewidth=0, antialiased=False)
+	surf_list[1] = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap = cm.coolwarm, linewidth=0, antialiased=False)
 
 
 
