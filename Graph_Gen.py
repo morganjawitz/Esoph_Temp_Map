@@ -29,7 +29,7 @@ for i in range(0,8):
 	theta = theta + (np.pi/2) #rotation for cylinderical points
 
 ann_list = [] #generating empty annotations list
-surf_list = [] #generating empty surface list
+#surf_list = [] #generating empty surface list
 
 #print(ys)
 #print(zs)
@@ -47,10 +47,12 @@ cstride = 10
 
 #plotting the original surface plot
 
-#surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
-#surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
+surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
+surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 
-def animate(i,xs,ys,zs,Xc,Zc,Yc):
+surf_list[surf1, surf2]
+
+def animate(i,xs,ys,zs,Xc,Zc,Yc,surf_list):
 	#reading temperature
 	#Temp = Temp_Read(1)
 
@@ -111,7 +113,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 	
 
 #set up plot to call animate() function periodically
-ani = animation.FuncAnimation(fig, animate, fargs = (xs, ys, zs, Xc, Zc, Yc), interval=1000)
+ani = animation.FuncAnimation(fig, animate, fargs = (xs, ys, zs, Xc, Zc, Yc,surf_list), interval=1000)
 plt.show()
 
 
