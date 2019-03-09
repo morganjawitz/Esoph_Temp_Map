@@ -50,7 +50,7 @@ cstride = 10
 surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 
-surf_list[surf1, surf2]
+surf_list = [surf1, surf2]
 
 def animate(i,xs,ys,zs,Xc,Zc,Yc,surf_list):
 	#reading temperature
