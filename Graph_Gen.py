@@ -47,10 +47,10 @@ cstride = 10
 
 #plotting the original surface plot
 
-surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
-surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
+#surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
+#surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 
-surf_list = [surf1, surf2]
+#surf_list = [surf1, surf2]
 
 def animate(i,xs,ys,zs,Xc,Zc,Yc,surf_list):
 	#reading temperature
@@ -92,8 +92,8 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,surf_list):
 
 	#removing surface plots
 	for c, s in enumerate(surf_list):
-		s.remove()
-	surf_list[:] = []
+		s.remove() #removing the surfs from the plot
+	surf_list[:] = [] #clearing surf_list to make room for new surfs
 
 	
 
@@ -103,6 +103,8 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,surf_list):
 	#plot the surface with new colors, adding new elements to surf_list to be plotted
 	surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap = cm.coolwarm, linewidth=0, antialiased=False)
 	surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap = cm.coolwarm, linewidth=0, antialiased=False)
+	
+	#adding the new surf plots to surf_list
 	surf_list.append(surf1)
 	surf_list.append(surf2)
 
