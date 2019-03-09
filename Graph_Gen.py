@@ -52,7 +52,7 @@ cstride = 10
 
 #surf_list = [surf1, surf2]
 
-def animate(i,xs,ys,zs,Xc,Zc,Yc,surf_list):
+def animate(i,xs,ys,zs,Xc,Zc,Yc):
 	#reading temperature
 	#Temp = Temp_Read(1)
 
