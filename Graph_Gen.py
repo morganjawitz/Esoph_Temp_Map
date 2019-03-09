@@ -29,7 +29,7 @@ for i in range(0,8):
 	theta = theta + (np.pi/2) #rotation for cylinderical points
 
 ann_list = [] #generating empty annotations list
-#surf_list = [] #generating empty surface list
+surf_list = [] #generating empty surface list
 
 #print(ys)
 #print(zs)
