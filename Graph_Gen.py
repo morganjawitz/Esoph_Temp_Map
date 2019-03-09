@@ -48,6 +48,8 @@ cstride = 10
 	
 #plotting the original surface plot
 ax.plot_trisurf(x,y,z)
+surf1 =1
+surf2 =2
 #surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 #surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 
