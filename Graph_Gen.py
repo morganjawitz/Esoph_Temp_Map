@@ -86,7 +86,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 	#x_dim = np.linspace(0,1,100)
 	#y_dim = np.linspace(0,1,100)
 	#Tx,Ty = np.meshgrid(x_dim,y_dim)
-	Tx,Ty = np.mgrid[0:1:100j, 0:1:100j]
+	Tx,Ty = np.mgrid[0:100:100j, 0:100:100j]
 	print(Tx)
 	print(Ty)
 
