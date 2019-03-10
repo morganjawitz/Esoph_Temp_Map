@@ -95,15 +95,21 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 	#points_pos = np.array([[0,49], [14,99],[49,0],[64,49],[79,99],[99,0]])
 	points_pos_x = [0,14,49,64,79,99]
 	points_pos_y = [49,99,0,49,99,0]
+	px = [0,5,10]
+	py = [0,5,10]
+	x_test = np.linspace(0,9,10)
+	y_test = np.linespace(0,9,10)
+	Xtest,Ytest = np.meshgrid(x_test,y_test)
 	#points_neg = np.matrix('14 99; 29 49; 49 0; 79 99; 94 49; 99 0')
 	#print(points_pos)
 
 	#listing values of known temps
-	values_pos = (Temps[0],Temps[1],Temps[3],Temps[4],Temps[5],Temps[7])
-	values_neg = (Temps[2],Temps[1],Temps[2],Temps[4],Temps[6],Temps[7])
+	#values_pos = (Temps[0],Temps[1],Temps[3],Temps[4],Temps[5],Temps[7])
+	#values_neg = (Temps[2],Temps[1],Temps[2],Temps[4],Temps[6],Temps[7])
+	values_pos = (Temps[0],Temps[1],Temps[3])
 
 	#interpolating Temps
-	Temp_Map_Pos = griddata((points_pos_x, points_pos_y), values_pos, (Tx, Ty), method='linear')
+	Temp_Map_Pos = griddata((x_test, y_test), values_pos, (Xtest, Ytest), method='linear')
 	print(Temp_Map_Pos)
 	#print(Temps[1])
 
