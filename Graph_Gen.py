@@ -87,8 +87,8 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 	y_dim = np.linspace(0,99,100)
 	Tx,Ty = np.meshgrid(x_dim,y_dim)
 	#Tx,Ty = np.mgrid[0:100:100j, 0:100:100j]\
-	print(Ty)
-	print(Ty.shape)
+	#print(Ty)
+	#print(Ty.shape)
 
 	#listing the cordinates with the T matrix where known temps are for positive Yc plot
 	#points_pos = np.random.rand(6,2)
@@ -104,8 +104,8 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 
 	#interpolating Temps
 	Temp_Map_Pos = griddata((points_pos_x, points_pos_y), values_pos, (Tx, Ty), method='linear')
-	print(Temp_Map_Pos[14,99])
-	print(Temps[1])
+	print(Temp_Map_Pos)
+	3print(Temps[1])
 
 
 
