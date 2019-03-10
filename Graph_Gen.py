@@ -92,8 +92,8 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 	#print(Ty)
 
 	#listing the cordinates with the T matrix where known temps are for positive Yc plot
-	#points_pos = np.matrix('0 49; 14 99; 49 0; 64 49; 79 99; 99 0' )
-	points_pos_x = [0,14,49,64,79,99]
+	points_pos = np.matrix('0 49; 14 99; 49 0; 64 49; 79 99; 99 0' )
+	#points_pos_x = [0,14,49,64,79,99]
 	points_pos_y = [49,99,0,49,99,0]
 	#points_neg = np.matrix('14 99; 29 49; 49 0; 79 99; 94 49; 99 0')
 
@@ -102,7 +102,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 	values_neg = (Temps[2],Temps[1],Temps[2],Temps[4],Temps[6],Temps[7])
 
 	#interpolating Temps
-	Temp_Map_Pos = griddata((points_pos_x, points_pos_y), values_pos, (Tx, Ty), method='linear')
+	Temp_Map_Pos = griddata(points_pos, values_pos, (Tx, Ty), method='linear')
 	print(Temp_Map_Pos[14,99])
 	print(Temps[0])
 
