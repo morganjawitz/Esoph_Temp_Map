@@ -98,7 +98,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 	px = [0,5,10]
 	py = [0,5,10]
 	x_test = np.linspace(0,9,10)
-	y_test = np.linespace(0,9,10)
+	y_test = np.linspace(0,9,10)
 	Xtest,Ytest = np.meshgrid(x_test,y_test)
 	#points_neg = np.matrix('14 99; 29 49; 49 0; 79 99; 94 49; 99 0')
 	#print(points_pos)
