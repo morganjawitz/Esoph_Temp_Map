@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib import animation
 from matplotlib import cm
 from Therm_Read_Test import Temp_Read #calling thermistor read function
+import scipy
 
 #initalizing graph
 fig = plt.figure()
