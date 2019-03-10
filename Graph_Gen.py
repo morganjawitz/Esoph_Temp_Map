@@ -32,9 +32,9 @@ for i in range(0,8):
 ann_list = [] #generating empty annotations list
 surf_list = [] #generating empty surface list
 
-print(xs)
-print(ys)
-print(zs)
+#print(xs)
+#print(ys)
+#print(zs)
 
 #plotting cylinder
 x = np.linspace(-r,r,100)
@@ -45,7 +45,7 @@ Xc, Zc = np.meshgrid(x,z)
 Yc = np.sqrt(r**2-Xc**2)
 
 #print(Xc.shape)
-print(Yc)
+#print(Yc)
 #print(Zc)
 
 
@@ -84,7 +84,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 
 	# Building temperature matrix 100x100
 	T = np.zeros((99,99))
-	print(T)
+	print(T.shape)
 
 
 
