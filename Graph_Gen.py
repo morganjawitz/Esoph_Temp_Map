@@ -87,7 +87,8 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 	#y_dim = np.linspace(0,1,100)
 	#Tx,Ty = np.meshgrid(x_dim,y_dim)
 	Tx,Ty = np.mgrid[0:1:100j, 0:1:100j]
-	print(Temps[0])
+	print(Tx)
+	print(Ty)
 
 	#listing the cordinates with the T matrix where known temps are for positive Yc plot
 	points_pos = np.matrix('0 49; 14 99; 49 0; 64 49; 79 99; 99 0' )
