@@ -97,7 +97,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 	points_pos_x = [0,14,49,64,79,99]
 	points_pos_y = [49,99,0,49,99,0]
 	#points_neg = np.matrix('14 99; 29 49; 49 0; 79 99; 94 49; 99 0')
-	print(points_pos)
+	#print(points_pos)
 
 	#listing values of known temps
 	values_pos = (Temps[0],Temps[1],Temps[3],Temps[4],Temps[5],Temps[7])
