@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib import animation
 from matplotlib import cm
 from Therm_Read_Test import Temp_Read #calling thermistor read function
-import scipy
+from scipy.interpolate import griddata
 
 #initalizing graph
 fig = plt.figure()
@@ -93,8 +93,8 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 	values_neg = (Temps[2],Temps[1],Temps[2],Temps[4],Temps[6],Temps[7])
 
 	#interpolating Temps
-	Temp_Map_Pos = scipy.interpolate.griddata(points_pos, values_pos, T, method = 'linear')
-	print(T)
+	Temp_Map_Pos = griddata(points_pos, values_pos, T, method = 'linear')
+	print(Temp_Map_Pos)
 
 
 
