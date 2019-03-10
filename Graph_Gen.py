@@ -83,8 +83,20 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 
 
 	# Building temperature matrix 100x100
-	T = np.zeros((99,99))
-	print(T.shape)
+	T = np.zeros((100,100))
+	#listing the cordinates with the T matrix where known temps are for positive Yc plot
+	points_pos = np.matrix('0 49; 14 99; 49 0; 64 49; 79 99; 99 0' )
+	points_neg = np.matrix('14 99; 29 49; 49 0; 79 99; 94 49; 99 0')
+
+	#listing values of known temps
+	values_pos = (Temps[0],Temps[1],Temps[3],Temps[4],Temps[5],Temps[7])
+	values_neg = (Temps[0],Temps[1],Temps[2],Temps[4],Temps[6],Temps[8])
+
+	#interpolating Temps
+	Temp_Map_Pos = scipy.interpolate.griddata(points_pos, values_pos, T, method = 'linear')
+	print(T)
+
+
 
 
 
