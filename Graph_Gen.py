@@ -109,7 +109,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 	values_pos = (Temps[0],Temps[1],Temps[3])
 
 	#interpolating Temps
-	Temp_Map_Pos = griddata((x_test, y_test), values_pos, (Xtest, Ytest), method='linear')
+	Temp_Map_Pos = griddata((px, py), values_pos, (Xtest, Ytest), method='linear')
 	print(Temp_Map_Pos)
 	#print(Temps[1])
 
