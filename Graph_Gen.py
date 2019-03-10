@@ -82,6 +82,11 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 		ann_list.append(ann) #adding new annotation to ann_list
 
 
+	# Building temperature matrix 100x100
+	T = np.zeros((99,99))
+	print(T)
+
+
 
 	#setting colormap
 	#colors = cm.ScalarMappable(cmap = "coolwarm").to_rgba(Temps)
