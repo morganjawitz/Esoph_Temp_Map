@@ -87,6 +87,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 	#y_dim = np.linspace(0,1,100)
 	#Tx,Ty = np.meshgrid(x_dim,y_dim)
 	Tx,Ty = np.mgrid[0:1:100j, 0:1:100j]
+	print(Temps[0])
 
 	#listing the cordinates with the T matrix where known temps are for positive Yc plot
 	points_pos = np.matrix('0 49; 14 99; 49 0; 64 49; 79 99; 99 0' )
@@ -121,7 +122,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 	
 
 	
-	#colors = cm.coolwarm(T/float(T.max()))
+	#fcolors = m.to_rgba(Temp_Map_Pos)
 
 	#plot the surface with new colors, adding new elements to surf_list to be plotted
 	surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, cmap = cm.coolwarm, linewidth=0, antialiased=False)
