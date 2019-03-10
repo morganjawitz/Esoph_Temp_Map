@@ -42,7 +42,7 @@ z = np.linspace(0,105,100)
 Xc, Zc = np.meshgrid(x,z)
 Yc = np.sqrt(r**2-Xc**2)
 
-#print(Xc)
+print(Xc.shape)
 #print(Yc)
 #print(Zc)
 
