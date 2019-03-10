@@ -37,10 +37,10 @@ surf_list = [] #generating empty surface list
 #plotting cylinder
 x = np.linspace(-r,r,100)
 z = np.linspace(0,105,100)
-y = np.sqrt(r**2-x**2)
-Xc,Zc,Yc = np.meshgrid(x,y,z)
-#Xc, Zc = np.meshgrid(x,z)
-#Yc = np.sqrt(r**2-Xc**2)
+#y = np.sqrt(r**2-x**2)
+#Xc,Zc,Yc = np.meshgrid(x,y,z) this didn't work
+Xc, Zc = np.meshgrid(x,z)
+Yc = np.sqrt(r**2-Xc**2)
 
 #print(Xc)
 #print(Yc)
