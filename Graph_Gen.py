@@ -82,10 +82,11 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 		ann_list.append(ann) #adding new annotation to ann_list
 
 
-	# Building temperature matrix 100x100
-	x_dim = 0:1:100
-	y_dim = 0:1:100
+	# Building temperature location matrix
+	x_dim = np.linspace(0:1:100)
+	y_dim = np.linspace(0:1:100)
 	Tx,Ty = np.meshgrid(x_dim,y_dim)
+	
 	#listing the cordinates with the T matrix where known temps are for positive Yc plot
 	points_pos = np.matrix('0 49; 14 99; 49 0; 64 49; 79 99; 99 0' )
 	points_pos_x = [0,14,49,64,79,99]
