@@ -89,8 +89,8 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 	points_neg = np.matrix('14 99; 29 49; 49 0; 79 99; 94 49; 99 0')
 
 	#listing values of known temps
-	values_pos = (Temps[0],Temps[1],Temps[3],Temps[4],Temps[5],Temp[7])
-	values_neg = (Temps[2],Temps[1],Temps[2],Temps[4],Temps[6],Temp[7])
+	values_pos = (Temps[0],Temps[1],Temps[3],Temps[4],Temps[5],Temps[7])
+	values_neg = (Temps[2],Temps[1],Temps[2],Temps[4],Temps[6],Temps[7])
 
 	#interpolating Temps
 	Temp_Map_Pos = scipy.interpolate.griddata(points_pos, values_pos, T, method = 'linear')
