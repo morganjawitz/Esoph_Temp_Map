@@ -31,8 +31,9 @@ for i in range(0,8):
 ann_list = [] #generating empty annotations list
 surf_list = [] #generating empty surface list
 
-#print(ys)
-#print(zs)
+print(xs)
+print(ys)
+print(zs)
 
 #plotting cylinder
 x = np.linspace(-r,r,100)
@@ -42,7 +43,7 @@ z = np.linspace(0,105,100)
 Xc, Zc = np.meshgrid(x,z)
 Yc = np.sqrt(r**2-Xc**2)
 
-print(Xc.shape)
+#print(Xc.shape)
 #print(Yc)
 #print(Zc)
 
