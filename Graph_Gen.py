@@ -38,7 +38,7 @@ surf_list = [] #generating empty surface list
 
 #plotting cylinder
 x = np.linspace(-r,r,100)
-z = np.linspace(0,100,100)
+z = np.linspace(0,99,100)
 y = np.sqrt(r**2-x**2)
 #Xc,Zc,Yc = np.meshgrid(x,y,z) this didn't work
 Xc, Zc = np.meshgrid(x,z)
@@ -93,7 +93,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,x,y,z):
 	#listing the cordinates with the T matrix where known temps are for positive Yc plot
 	points_pos_x = [0,3,-3,0,3,-3]
 	points_pos_y = [3,0,0,3,0,0]
-	points_pos_z = [0,15,45,60,75,100]
+	points_pos_z = [0,15,45,60,75,99]
 
 
 	#listing values of known temps
