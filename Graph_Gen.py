@@ -39,7 +39,7 @@ surf_list = [] #generating empty surface list
 #plotting cylinder
 x = np.linspace(-r,r,100)
 z = np.linspace(0,105,100)
-#y = np.sqrt(r**2-x**2)
+y = np.sqrt(r**2-x**2)
 #Xc,Zc,Yc = np.meshgrid(x,y,z) this didn't work
 Xc, Zc = np.meshgrid(x,z)
 Yc = np.sqrt(r**2-Xc**2)
@@ -54,7 +54,7 @@ rstride = 10
 cstride = 10
 
 
-def animate(i,xs,ys,zs,Xc,Zc,Yc):
+def animate(i,xs,ys,zs,Xc,Zc,Yc,x,z,y):
 	#reading temperature
 	#Temp = Temp_Read(1)
 
@@ -103,8 +103,8 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 
 
 	#interpolating Temps
-	Temp_Map_Pos = griddata((points_pos_x, points_pos_y, points_pos_z), values_pos, (Xc, Yc, Zc), method='linear')
-	print(Temp_Map_Pos)
+	T = griddata((points_pos_x, points_pos_y, points_pos_z), values_pos, (x, y, z), method='linear')
+	print(T)
 	#print(Temps[1])
 
 
@@ -140,7 +140,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc):
 	
 
 #set up plot to call animate() function periodically
-ani = animation.FuncAnimation(fig, animate, fargs = (xs, ys, zs, Xc, Zc, Yc), interval=1000)
+ani = animation.FuncAnimation(fig, animate, fargs = (xs, ys, zs, Xc, Zc, Yc, x, y, z), interval=1000)
 plt.show()
 
 
