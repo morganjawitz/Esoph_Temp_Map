@@ -105,7 +105,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,x,y,z):
 
 	#listing values of known temps
 	#values_pos = (Temps[0],Temps[1],Temps[3],Temps[4],Temps[5],Temps[7])
-	values_pos = (Temp[0],Temp[1],Temp[3],Temp[4],Temp[5],Temp[7])
+	values_pos = (Temps[0],Temps[1],Temps[3],Temps[4],Temps[5],Temps[7])
 	#values_neg = (Temps[2],Temps[1],Temps[2],Temps[4],Temps[6],Temps[7])
 
 
