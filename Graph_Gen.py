@@ -45,7 +45,7 @@ Xc, Zc = np.meshgrid(x,z)
 Yc = np.sqrt(r**2-Xc**2)
 
 #print(Xc)
-print(Yc[:,49])
+print(Yc[:,50])
 #print(Zc)
 
 #print(Xc.shape)
