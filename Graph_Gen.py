@@ -44,6 +44,10 @@ y = np.sqrt(r**2-x**2)
 Xc, Zc = np.meshgrid(x,z)
 Yc = np.sqrt(r**2-Xc**2)
 
+print(Xc)
+print(Yc)
+print(Zc)
+
 #print(Xc.shape)
 #print(Yc)
 #print(Zc)
@@ -105,7 +109,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,x,y,z):
 	#interpolating Temps
 	T = griddata((points_pos_x, points_pos_y, points_pos_z), values_pos, (Xc, Yc, Zc), method='linear')
 	#print(Zc)
-	print(T[0,:])
+	#print(T[0,:])
 	#print(points_pos_z)
 	#print(Zc)
 
