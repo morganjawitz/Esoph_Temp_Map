@@ -106,6 +106,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,x,y,z):
 	T = griddata((points_pos_x, points_pos_y, points_pos_z), values_pos, (Xc, Yc, Zc), method='linear')
 	#print(T)
 	print(points_pos_z)
+	print(Zc)
 
 
 
