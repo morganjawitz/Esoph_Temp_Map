@@ -93,7 +93,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,x,y,z):
 	#listing the cordinates with the T matrix where known temps are for positive Yc plot
 	points_pos_x = [0,3,-3,0,3,-3]
 	points_pos_y = [3,0,0,3,0,0]
-	points_pos_z = [0,15.75,47.25,63,78.5,105]
+	points_pos_z = [0,z[15],z[45],z[60],z[75],105]
 
 
 	#listing values of known temps
@@ -103,9 +103,8 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,x,y,z):
 
 
 	#interpolating Temps
-	T = griddata((points_pos_x, points_pos_y, points_pos_z), values_pos, (x, y, z), method='linear')
+	T = griddata((points_pos_x, points_pos_y, points_pos_z), values_pos, (Xc, Yc, Zc), method='linear')
 	print(T)
-	print(z)
 	#print(Temps[1])
 
 
