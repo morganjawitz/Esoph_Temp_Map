@@ -54,7 +54,7 @@ rstride = 10
 cstride = 10
 
 
-def animate(i,xs,ys,zs,Xc,Zc,Yc,x,z,y):
+def animate(i,xs,ys,zs,Xc,Zc,Yc,x,y,z):
 	#reading temperature
 	#Temp = Temp_Read(1)
 
