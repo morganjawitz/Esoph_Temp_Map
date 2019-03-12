@@ -136,7 +136,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,x,y,z):
 		color = 'b'
 	elif np.average(Temps) >= 38:
 		color = 'r'
-	elif:
+	else:
 		color = 'g'
 
 	
