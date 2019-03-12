@@ -88,9 +88,9 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,x,y,z):
 
 	#listing the cordinates with the T matrix where known temps are for positive Yc plot
 	#points_pos_x = [0,3,-3,0,3,-3]
-	points_pos_x = [x[49],x[64],x[99],x[49],x[64],x[99],x[99],x[0],x[0],x[24],x[0],x[24],x[0]]
+	points_pos_x = [x[49],x[64],x[99],x[99],x[49],x[64],x[99],x[99],x[0],x[0],x[24],x[0],x[24],x[0]]
 	#points_pos_y = [3,0,0,3,0,0]
-	points_pos_z = [z[0],z[15],z[30],z[60],z[75],z[90],z[99],z[0],z[30],z[45],z[90],z[99],z[99]]
+	points_pos_z = [z[0],z[15],z[30],z[0],z[60],z[75],z[90],z[99],z[0],z[30],z[45],z[90],z[99],z[99]]
 
 
 	#listing values of known temps
