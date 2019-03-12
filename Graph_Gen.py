@@ -86,33 +86,23 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,x,y,z):
 		ann_list.append(ann) #adding new annotation to ann_list
 
 
-	# Building temperature location matrix
-	x_dim = np.linspace(0,99,100)
-	y_dim = np.linspace(0,99,100)
-	Tx,Ty = np.meshgrid(x_dim,y_dim)
-	#Tx,Ty = np.mgrid[0:100:100j, 0:100:100j]\
-	#print(Ty)
-	#print(Ty.shape)
-
 	#listing the cordinates with the T matrix where known temps are for positive Yc plot
 	#points_pos_x = [0,3,-3,0,3,-3]
-	points_pos_x = [x[49],x[99],x[0],x[49],x[99],x[0]]
+	points_pos_x = [x[49],x[64],x[99],x[49],x[64],x[99],x[99],x[0],x[0],x[24],x[0],x[24],x[0]]
 	#points_pos_y = [3,0,0,3,0,0]
-	points_pos_y = [y[49],y[0],y[0],y[49],y[0],y[0]]
-	#points_pos_z = [0,15,45,60,75,99]
-	points_pos_z = [z[0],z[15],z[45],z[60],z[75],z[99]]
+	points_pos_z = [z[0],z[15],z[30],z[60],z[75],z[90],z[99],z[0],z[30],z[45],z[90],z[99],z[99]]
 
 
 	#listing values of known temps
-	#values_pos = (Temps[0],Temps[1],Temps[3],Temps[4],Temps[5],Temps[7])
-	values_pos = [17,17.5,18.2,18.3,21.3,22.4]
+	values_pos = (Temps[0],Temps[1],Temps[2],Temps[4],Temps[5],Temps[6],Temps[7],Temps[2],Temps[2],Temps[3],Temps[6],Temps[7],Temps[7])
+	#values_pos = [17,17.5,18.2,18.3,21.3,22.4]
 	#values_neg = (Temps[2],Temps[1],Temps[2],Temps[4],Temps[6],Temps[7])
 
 
 	#interpolating Temps
-	T = griddata((points_pos_x, points_pos_y, points_pos_z), values_pos, (Xc, Yc, Zc), method='linear')
+	T = griddata((points_pos_x, points_pos_z), values_pos, (Xc, Zc), method='linear')
 	#print(Zc)
-	#print(T[0,:])
+	print(T[0,:])
 	#print(points_pos_z)
 	#print(Zc)
 
