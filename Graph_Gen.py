@@ -120,7 +120,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,x,y,z):
 
 	#setting color map from Temperature
 	color_dim = T #selecting temp points to be used for color scalig
-	minn,maxx = color_dim.min(), color_dim.max() #setting min and max values
+	minn,maxx = 15, 50 #setting min and max values of high and low temps
 	norm = matplotlib.colors.Normalize(minn,maxx) #normalizing the values
 	m = plt.cm.ScalarMappable(norm=norm, cmap= 'coolwarm') #applying normalized values to colormap
 	m.set_array([]) #creating array
