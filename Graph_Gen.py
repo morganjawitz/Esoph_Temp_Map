@@ -92,9 +92,11 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,x,y,z):
 	T1 = [x[99],z[15],Temps[1]]
 	T2 = [x[49],z[30],Temps[2]]
 	T3 = [x[0],z[45],Temps[3]]
-	T4 = [x[49],z[60],Temps[4]]
+	#T4 = [x[49],z[60],Temps[4]] #testing the color map
+	T4 = [x[49],z[60],45]
 	T5 = [x[99],z[75],Temps[5]]
-	T6 = [x[49],z[90],Temps[6]]
+	#T6 = [x[49],z[90],Temps[6]]
+	T6 = [x[49],z[90],38] #testing the color map
 	T7 = [x[0],z[99],Temps[7]]
 	BC1 = [x[0],z[0],Temps[2]]
 	BC2 = [x[0],z[30],Temps[2]]
