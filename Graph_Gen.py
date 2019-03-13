@@ -57,7 +57,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,m,minn,maxx,x,z):
 
 
 	ax.scatter(xs,ys,zs,c='black') #plotting thermistor points
-	ax.scatter(Xc[7,87],Yc[7,87],Zc[7,87], c='black')
+	ax.scatter(Xc[53,36],Yc[53,36],Zc[53,36], c='black')
 
 
 	for c, a in enumerate(ann_list):
@@ -111,7 +111,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,m,minn,maxx,x,z):
 
 	#interpolating Temps
 	T = griddata((points_x, points_z), values, (Xc, Zc), method='linear')
-	print(str(T[7,87]) + "\r", end="")
+	print(str(T[53,36]) + "\r", end="")
 	#print(x[100])
 
 	#setting color map from Temperature
