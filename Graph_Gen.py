@@ -102,7 +102,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,x,y,z):
 	BC5 = [x[99],z[0],Temps[2]]
 	BC6 = [x[99],z[30],Temps[2]]
 	BC7 = [x[99],z[90],Temps[6]]
-	BC8 = [x[99],z[99],Temps[6]]
+	BC8 = [x[99],z[99],Temps[7]]
 
 	#points_pos_x = [x[49],x[64],x[99],x[99],x[49],x[64],x[99],x[99],x[0],x[0],x[24],x[0],x[24],x[0]]
 	#points_pos_y = [3,0,0,3,0,0]
