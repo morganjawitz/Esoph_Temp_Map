@@ -57,7 +57,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,m,minn,maxx,x,z):
 
 
 	ax.scatter(xs,ys,zs,c='black') #plotting thermistor points
-	ax.scatter(Xc[53,12],Yc[53,12],Zc[53,12], c='black')
+	ax.scatter(Xc[53,12],-Yc[53,12],Zc[53,12], c='black')
 
 
 	for c, a in enumerate(ann_list):
