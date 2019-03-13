@@ -145,8 +145,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,x,y,z):
 	#plot the surface with new colors, adding new elements to surf_list to be plotted
 	surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.4, rstride=rstride, cstride=cstride, facecolors = fcolors, vmin=minn, vmax=maxx, shade=False, linewidth=0, antialiased=False)
 	surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.4, rstride=rstride, cstride=cstride, facecolors = fcolors, vmin=minn, vmax=maxx, shade=False, linewidth=0, antialiased=False)
-	
-	cbar = plt.colorbar(m, ax=ax)
+
 	#adding the new surf plots to surf_list
 	surf_list.append(surf1)
 	surf_list.append(surf2)
@@ -156,6 +155,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,x,y,z):
 
 #set up plot to call animate() function periodically
 ani = animation.FuncAnimation(fig, animate, fargs = (xs, ys, zs, Xc, Zc, Yc, x, y, z), interval=1000)
+cbar = plt.colorbar(m, ax=ax)
 plt.show()
 
 
