@@ -51,13 +51,13 @@ norm = matplotlib.colors.Normalize(minn,maxx) #normalizing the values
 m = plt.cm.ScalarMappable(norm=norm, cmap= 'coolwarm') #applying normalized values to colormap
 m.set_array([]) #creating array
 
-def animate(i,xs,ys,zs,Xc,Zc,Yc,m,minn,maxx):
+def animate(i,xs,ys,zs,Xc,Zc,Yc,m,minn,maxx,x,z):
 	#reading temperature
 	#Temp = Temp_Read(1)
 
 
 	ax.scatter(xs,ys,zs,c='black') #plotting thermistor points
-	ax.scatter(Xc[7,56],Yc[7,56],Zc[7,56], c='black')
+	ax.scatter(Xc[7,87],Yc[7,87],Zc[7,87], c='black')
 
 
 	for c, a in enumerate(ann_list):
@@ -82,13 +82,13 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,m,minn,maxx):
 
 	#listing the cordinates with the T matrix where known temps are for positive Yc plot
 	T0 = [x[49],z[0],Temps[0]]
-	T1 = [x[99],z[15],Temps[1]]
-	T2 = [x[49],z[30],Temps[2]]
-	T3 = [x[0],z[45],Temps[3]]
+	T1 = [x[74],z[15],Temps[1]]
+	T2 = [x[99],z[30],Temps[2]]
+	T3 = [x[24],z[45],Temps[3]]
 	T4 = [x[49],z[60],Temps[4]]
 	#T4 = [x[49],z[60],45] #testing the color map
-	T5 = [x[99],z[75],Temps[5]]
-	T6 = [x[49],z[90],Temps[6]]
+	T5 = [x[74],z[75],Temps[5]]
+	T6 = [x[99],z[90],Temps[6]]
 	#T6 = [x[49],z[90],38] #testing the color map
 	T7 = [x[0],z[99],Temps[7]]
 	BC1 = [x[0],z[0],Temps[2]]
@@ -111,7 +111,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,m,minn,maxx):
 
 	#interpolating Temps
 	T = griddata((points_x, points_z), values, (Xc, Zc), method='cubic')
-	print(str(T[7,56]) + "\r", end="")
+	print(str(T[7,87]) + "\r", end="")
 	#print(x[100])
 
 	#setting color map from Temperature
@@ -145,7 +145,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,m,minn,maxx):
 	
 
 #set up plot to call animate() function periodically
-ani = animation.FuncAnimation(fig, animate, fargs = (xs, ys, zs, Xc, Zc, Yc, m, minn, maxx), interval=1000)
+ani = animation.FuncAnimation(fig, animate, fargs = (xs, ys, zs, Xc, Zc, Yc, m, minn, maxx, x, z), interval=1000)
 cbar = plt.colorbar(m, ax=ax)
 plt.show()
 
