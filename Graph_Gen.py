@@ -81,13 +81,13 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,m,minn,maxx,x,z):
 
 
 	#listing the cordinates with the T matrix where known temps are for positive Yc plot
-	T0 = [x[49],z[0],Temps[0]]
+	T0 = [x[49],z[0],Temps[5]]
 	T1 = [x[74],z[15],Temps[1]]
 	T2 = [x[99],z[30],Temps[2]]
 	T3 = [x[24],z[45],Temps[3]]
 	T4 = [x[49],z[60],Temps[4]]
 	#T4 = [x[49],z[60],45] #testing the color map
-	T5 = [x[74],z[75],Temps[5]]
+	T5 = [x[74],z[75],Temps[0]]
 	T6 = [x[99],z[90],Temps[6]]
 	#T6 = [x[49],z[90],38] #testing the color map
 	T7 = [x[0],z[99],Temps[7]]
