@@ -108,7 +108,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,x,y,z):
 	#points_pos_y = [3,0,0,3,0,0]
 	#points_pos_z = [z[0],z[15],z[30],z[0],z[60],z[75],z[90],z[99],z[0],z[30],z[45],z[90],z[99],z[99]]
 	points_x = [BC1[0],BC2[0],BC3[0],BC4[0],BC5[0],BC6[0],BC7[0],BC8[0],T0[0],T1[0],T2[0],T3[0],T4[0],T5[0],T6[0],T7[0]]
-	points_z = [BC1[1],BC2[1],BC3[1],BC4[1],BC5[1],BC6[1],BC7[1],BC8[1]T0[1],T1[1],T2[1],T3[1],T4[1],T5[1],T6[1],T7[1]]
+	points_z = [BC1[1],BC2[1],BC3[1],BC4[1],BC5[1],BC6[1],BC7[1],BC8[1],T0[1],T1[1],T2[1],T3[1],T4[1],T5[1],T6[1],T7[1]]
 
 
 	#listing values of known temps
