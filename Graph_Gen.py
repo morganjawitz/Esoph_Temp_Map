@@ -45,16 +45,13 @@ y = np.sqrt(r**2-x**2)
 Xc, Zc = np.meshgrid(x,z)
 Yc = np.sqrt(r**2-Xc**2)
 
-#setting color map from Temperature
-color_dim = T #selecting temp points to be used for color scalig
+#parameters for colormap and color bar
 minn,maxx = 15, 50 #setting min and max values of high and low temps
 norm = matplotlib.colors.Normalize(minn,maxx) #normalizing the values
 m = plt.cm.ScalarMappable(norm=norm, cmap= 'coolwarm') #applying normalized values to colormap
 m.set_array([]) #creating array
-fcolors = m.to_rgba(color_dim) #setting array to Temp
 
-
-def animate(i,xs,ys,zs,Xc,Zc,Yc,fcolors,minn,maxx):
+def animate(i,xs,ys,zs,Xc,Zc,Yc,m,minn,maxx):
 	#reading temperature
 	#Temp = Temp_Read(1)
 
@@ -115,7 +112,10 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,fcolors,minn,maxx):
 	T = griddata((points_x, points_z), values, (Xc, Zc), method='linear')
 	#print(T)
 
+	#setting color map from Temperature
+	color_dim = T #selecting temp points to be used for color scaling
 
+	fcolors = m.to_rgba(color_dim) #setting array to Temp
 
 
 
@@ -143,7 +143,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,fcolors,minn,maxx):
 	
 
 #set up plot to call animate() function periodically
-ani = animation.FuncAnimation(fig, animate, fargs = (xs, ys, zs, Xc, Zc, Yc, fcolors, minn, maxx), interval=1000)
+ani = animation.FuncAnimation(fig, animate, fargs = (xs, ys, zs, Xc, Zc, Yc, m, minn, maxx), interval=1000)
 cbar = plt.colorbar(m, ax=ax)
 plt.show()
 
