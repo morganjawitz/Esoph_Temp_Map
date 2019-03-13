@@ -55,7 +55,7 @@ def Temp_Read(x):
  		pin5 = AnalogIn(mcp, MCP.P5)
  		pin6 = AnalogIn(mcp, MCP.P6)
  		pin7 = AnalogIn(mcp, MCP.P7)
- 		chan = [pin0,pin1,pin2,pin3,pin4,pin5,pin6,pin7]
+ 		chan = [pin5,pin1,pin2,pin3,pin4,pin0,pin6,pin7]
  	
 		#converting to voltage
  		volt = chan[i].voltage
