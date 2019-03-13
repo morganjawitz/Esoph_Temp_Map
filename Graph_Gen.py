@@ -110,7 +110,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,m,minn,maxx,x,z):
 
 
 	#interpolating Temps
-	T = griddata((points_x, points_z), values, (Xc, Zc), method='cubic')
+	T = griddata((points_x, points_z), values, (Xc, Zc), method='linear')
 	print(str(T[7,87]) + "\r", end="")
 	#print(x[100])
 
