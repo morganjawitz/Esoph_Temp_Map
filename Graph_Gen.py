@@ -104,32 +104,28 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,x,y,z):
 	BC7 = [x[99],z[90],Temps[6]]
 	BC8 = [x[99],z[99],Temps[7]]
 
-	#points_pos_x = [x[49],x[64],x[99],x[99],x[49],x[64],x[99],x[99],x[0],x[0],x[24],x[0],x[24],x[0]]
-	#points_pos_y = [3,0,0,3,0,0]
-	#points_pos_z = [z[0],z[15],z[30],z[0],z[60],z[75],z[90],z[99],z[0],z[30],z[45],z[90],z[99],z[99]]
+	#setting known points and temperature values for interp.
 	points_x = [BC1[0],BC2[0],BC3[0],BC4[0],BC5[0],BC6[0],BC7[0],BC8[0],T0[0],T1[0],T2[0],T3[0],T4[0],T5[0],T6[0],T7[0]]
+	
 	points_z = [BC1[1],BC2[1],BC3[1],BC4[1],BC5[1],BC6[1],BC7[1],BC8[1],T0[1],T1[1],T2[1],T3[1],T4[1],T5[1],T6[1],T7[1]]
 
-
-	#listing values of known temps
 	values = [BC1[2],BC2[2],BC3[2],BC4[2],BC5[2],BC6[2],BC7[2],BC8[2],T0[2],T1[2],T2[2],T3[2],T4[2],T5[2],T6[2],T7[2]]
-	#values_pos = [17,17.5,18.2,18.3,21.3,22.4]
-	#values_neg = (Temps[2],Temps[1],Temps[2],Temps[4],Temps[6],Temps[7])
+
 
 
 	#interpolating Temps
 	T = griddata((points_x, points_z), values, (Xc, Zc), method='linear')
-	#print(Zc)
-	print(T)
-	#print(points_pos_z)
-	#print(Zc)
+	#print(T)
+
+	#setting color map from Temperature
+	color_dim = T #selecting temp points to be used for color scalig
+	minn,maxx = color.dim.min(),color_dim.max() #setting min and max values
+	norm = matplotlib.colors.Normalize(minn,maxx) #normalizing the values
+	m = plt.cm.ScalarMappable(norm=norm, cmap= 'coolwarm') #applying normalized values to colormap
+	m.set_array([]) #creating array
+	fcolors = m.to_rgba(color_dim) #setting array to Temp
 
 
-
-
-
-	#setting colormap
-	#colors = cm.ScalarMappable(cmap = "coolwarm").to_rgba(Temps)
 
 	# Draw parameters
 	rstride = 10
@@ -151,8 +147,8 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,x,y,z):
 	#fcolors = m.to_rgba(Temp_Map_Pos)
 
 	#plot the surface with new colors, adding new elements to surf_list to be plotted
-	surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, color = color, linewidth=0, antialiased=False)
-	surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, color = color, linewidth=0, antialiased=False)
+	surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, facecolors = fcolors, vmin=minn, vmax=maxx, shade=False linewidth=0, antialiased=False)
+	surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, facecolors = fcolors, vmin=minn, vmax=maxx, shade=False linewidth=0, antialiased=False)
 	
 	#adding the new surf plots to surf_list
 	surf_list.append(surf1)
