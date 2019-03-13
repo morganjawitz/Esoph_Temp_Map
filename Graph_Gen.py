@@ -147,8 +147,8 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,x,y,z):
 	#fcolors = m.to_rgba(Temp_Map_Pos)
 
 	#plot the surface with new colors, adding new elements to surf_list to be plotted
-	surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, facecolors = fcolors, vmin=minn, vmax=maxx, shade=False linewidth=0, antialiased=False)
-	surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, facecolors = fcolors, vmin=minn, vmax=maxx, shade=False linewidth=0, antialiased=False)
+	surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, facecolors = fcolors, vmin=minn, vmax=maxx, shade=False, linewidth=0, antialiased=False)
+	surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.2, rstride=rstride, cstride=cstride, facecolors = fcolors, vmin=minn, vmax=maxx, shade=False, linewidth=0, antialiased=False)
 	
 	#adding the new surf plots to surf_list
 	surf_list.append(surf1)
