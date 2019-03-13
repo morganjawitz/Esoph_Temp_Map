@@ -153,7 +153,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,x,y,z):
 	surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.4, rstride=rstride, cstride=cstride, facecolors = fcolors, vmin=minn, vmax=maxx, shade=False, linewidth=0, antialiased=False)
 	surf2 = ax.plot_surface(Xc, -Yc, Zc, alpha=0.4, rstride=rstride, cstride=cstride, facecolors = fcolors, vmin=minn, vmax=maxx, shade=False, linewidth=0, antialiased=False)
 	
-	cbar = ax.figure.colorbar(surf1)
+	cbar = plt.colorbar()
 	#adding the new surf plots to surf_list
 	surf_list.append(surf1)
 	surf_list.append(surf2)
