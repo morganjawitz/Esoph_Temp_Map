@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib import animation
 from matplotlib import cm
 import matplotlib
-from Therm_Read_Test import Temp_Read #calling thermistor read function
+from Therm_Read_Test import Temp_Read #importing thermistor read function
 from scipy.interpolate import griddata
 
 #initalizing graph
@@ -57,7 +57,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,m,minn,maxx,x,z):
 
 
 	ax.scatter(xs,ys,zs,c='black') #plotting thermistor points
-	ax.scatter(Xc[53,12],-Yc[53,12],Zc[53,12], c='black')
+	#ax.scatter(Xc[53,12],-Yc[53,12],Zc[53,12], c='black') #for interpolation testing
 
 
 	for c, a in enumerate(ann_list):
@@ -111,7 +111,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,m,minn,maxx,x,z):
 
 	#interpolating Temps
 	T = griddata((points_x, points_z), values, (Xc, Zc), method='linear')
-	print(str(T[53,12]) + "\r", end="")
+	#print(str(T[53,12]) + "\r", end="") #for interpolation testing
 	#print(x[100])
 
 	#setting color map from Temperature
@@ -131,7 +131,6 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,m,minn,maxx,x,z):
 	surf_list[:] = [] #clearing surf_list to make room for new surfs
 
 	
-	#fcolors = m.to_rgba(Temp_Map_Pos)
 
 	#plot the surface with new colors, adding new elements to surf_list to be plotted
 	surf1 = ax.plot_surface(Xc, Yc, Zc, alpha=0.4, rstride=rstride, cstride=cstride, facecolors = fcolors, vmin=minn, vmax=maxx, shade=False, linewidth=0, antialiased=False)
@@ -146,11 +145,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,m,minn,maxx,x,z):
 
 #set up plot to call animate() function periodically
 ani = animation.FuncAnimation(fig, animate, fargs = (xs, ys, zs, Xc, Zc, Yc, m, minn, maxx, x, z), interval=1000)
-cbar = plt.colorbar(m, ax=ax)
+cbar = plt.colorbar(m, ax=ax) #plotting the color bar based off the color map array
+cbar.ax.set_ylabel('Degrees Celsius', rotation=270)
 plt.show()
 
-
-
-
-
-#print(Temp_Read(1))
