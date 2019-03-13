@@ -163,6 +163,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,x,y,z):
 #set up plot to call animate() function periodically
 ani = animation.FuncAnimation(fig, animate, fargs = (xs, ys, zs, Xc, Zc, Yc, x, y, z), interval=1000)
 plt.show()
+fig.colorbar(surf1)
 
 
 
