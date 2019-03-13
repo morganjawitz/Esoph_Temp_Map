@@ -107,12 +107,12 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,x,y,z):
 	#points_pos_x = [x[49],x[64],x[99],x[99],x[49],x[64],x[99],x[99],x[0],x[0],x[24],x[0],x[24],x[0]]
 	#points_pos_y = [3,0,0,3,0,0]
 	#points_pos_z = [z[0],z[15],z[30],z[0],z[60],z[75],z[90],z[99],z[0],z[30],z[45],z[90],z[99],z[99]]
-	points_x = [BC1[1],BC2[1],BC3[1],BC4[1],BC5[1],BC6[1],T0[1],T1[1],T2[1],T3[1],T4[1],T5[1],T6[1],T7[1]]
-	points_z = [BC1[2],BC2[2],BC3[2],BC4[2],BC5[2],BC6[2],T0[2],T1[2],T2[2],T3[2],T4[2],T5[2],T6[2],T7[2]]
+	points_x = [BC1[0],BC2[0],BC3[0],BC4[0],BC5[0],BC6[0],T0[0],T1[0],T2[0],T3[0],T4[0],T5[0],T6[0],T7[0]]
+	points_z = [BC1[1],BC2[1],BC3[1],BC4[1],BC5[1],BC6[1],T0[1],T1[1],T2[1],T3[1],T4[1],T5[1],T6[1],T7[1]]
 
 
 	#listing values of known temps
-	values = [BC1[3],BC2[3],BC3[3],BC4[3],BC5[3],BC6[3],T0[3],T1[3],T2[3],T3[3],T4[3],T5[3],T6[3],T7[3]]
+	values = [BC1[2],BC2[2],BC3[2],BC4[2],BC5[2],BC6[2],T0[2],T1[2],T2[2],T3[2],T4[2],T5[2],T6[2],T7[2]]
 	#values_pos = [17,17.5,18.2,18.3,21.3,22.4]
 	#values_neg = (Temps[2],Temps[1],Temps[2],Temps[4],Temps[6],Temps[7])
 
