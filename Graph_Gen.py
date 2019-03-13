@@ -146,6 +146,6 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,m,minn,maxx,x,z):
 #set up plot to call animate() function periodically
 ani = animation.FuncAnimation(fig, animate, fargs = (xs, ys, zs, Xc, Zc, Yc, m, minn, maxx, x, z), interval=1000)
 cbar = plt.colorbar(m, ax=ax) #plotting the color bar based off the color map array
-cbar.ax.set_ylabel('Degrees Celsius', rotation=270)
+cbar.ax.set_ylabel('Degrees C')
 plt.show()
 
