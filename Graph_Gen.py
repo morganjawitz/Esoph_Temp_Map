@@ -109,7 +109,7 @@ def animate(i,xs,ys,zs,Xc,Zc,Yc,m,minn,maxx):
 
 
 	#interpolating Temps
-	T = griddata((points_x, points_z), values, (Xc, Zc), method='linear')
+	T = griddata((points_x, points_z), values, (Xc, Zc), method='cubic')
 	print(str(T[7,56]) + "\r", end="")
 
 	#setting color map from Temperature
